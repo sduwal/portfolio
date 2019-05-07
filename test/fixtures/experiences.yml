@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  company: MyString
+  address: one
+  start: 2019-05-06
+  end: 2019-05-06
+  user: one
+  description: MyString
+  link: MyString
+
+two:
+  title: MyString
+  company: MyString
+  address: two
+  start: 2019-05-06
+  end: 2019-05-06
+  user: two
+  description: MyString
+  link: MyString

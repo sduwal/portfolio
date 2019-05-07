@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  school: MyString
+  degree: MyString
+  field: MyString
+  from: 2019-05-06
+  to: 2019-05-06
+  user: one
+  address: one
+
+two:
+  school: MyString
+  degree: MyString
+  field: MyString
+  from: 2019-05-06
+  to: 2019-05-06
+  user: two
+  address: two
