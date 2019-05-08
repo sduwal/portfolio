@@ -5,7 +5,8 @@
     </div>
     <div id="description">
           <h1 class="name"><%= @users.name %></h1>
-          <address><%= @users.address.city %>, <%= @users.address.state %></address>
+          
+          <address><%= @user_address.city %>, <%= @user_address.state %></address>
           <p><%= @users.occupation%></p>
           <p><%=@users.description %></p>
     </div>
@@ -13,8 +14,7 @@
     <button id="print">Print</button>
     <button id="toggle">Toggle Collapse</button>
   </div>
-  <div id="experience" class="divisions">
-    <details>
+    <details id="experience" class="divisions" open>
       <summary>Work History</summary>
       <div class="division_inside">
         <% @experience.each do |e| %>
@@ -42,9 +42,8 @@
         <%end %>
       </div>
     </details>
-  </div>
   <div id="project" class="divisions">
-    <details>
+    <details open> 
       <summary>Projects</summary>
       <div class="division_inside">
         <% @projects.each do |e| %>
@@ -61,7 +60,7 @@
   </div>
 
   <div id="education" class="divisions">
-    <details>
+    <details open> 
       <summary>Education</summary>
       <div class="division_inside">
         <% @education.each do |e| %>
@@ -83,7 +82,7 @@
     </details>
   </div>
   <div id="honor" class="divisions">
-    <details>
+    <details open> 
       <summary>Honors and Awards</summary>
       <div class="division_inside">
         <% @awards.each do |e| %>

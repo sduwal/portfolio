@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-    has_one :address
     has_many :experience
     has_many :education
     has_many :personalprojects

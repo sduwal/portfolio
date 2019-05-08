@@ -7,8 +7,11 @@
 }
 
 details {
-    background: #ddd;
     border-radius: calc(var(--margin) + 2px);
+}
+
+details[open] {
+    background: #ddd;
 }
 
 summary {
@@ -75,7 +78,14 @@ details[open] summary {
     border: 2px solid white;
 }
 
-#experience {}
+
+#experience {
+    grid-row: auto;
+}
+
+#experience[open] {
+    grid-row: 2/6;
+}
 
 .link {
     color: black;

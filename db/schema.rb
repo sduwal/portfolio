@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_07_043549) do
+ActiveRecord::Schema.define(version: 2019_05_08_034436) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,10 +21,8 @@ ActiveRecord::Schema.define(version: 2019_05_07_043549) do
     t.string "city"
     t.string "state"
     t.integer "zipcode"
-    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_addresses_on_user_id"
   end
 
   create_table "educations", force: :cascade do |t|
@@ -88,9 +86,10 @@ ActiveRecord::Schema.define(version: 2019_05_07_043549) do
     t.string "occupation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "address_id"
+    t.index ["address_id"], name: "index_users_on_address_id"
   end
 
-  add_foreign_key "addresses", "users"
   add_foreign_key "educations", "addresses"
   add_foreign_key "educations", "addresses", column: "addresses_id"
   add_foreign_key "educations", "users"
@@ -98,4 +97,5 @@ ActiveRecord::Schema.define(version: 2019_05_07_043549) do
   add_foreign_key "experiences", "users"
   add_foreign_key "personalawards", "users"
   add_foreign_key "personalprojects", "users"
+  add_foreign_key "users", "addresses"
 end

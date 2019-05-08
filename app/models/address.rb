@@ -1,6 +1,4 @@
 class Address < ApplicationRecord
-  belongs_to :user
-
   validates :street, :city, :state, :zipcode, presence: true
   validate :state, :state_length_validator
   validates_length_of :zipcode, is: 5, message: "Zip code must be of length 5"
