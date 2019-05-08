@@ -4,21 +4,13 @@
       <%= image_tag("profile_pic.jpg") %>
     </div>
     <div id="description">
-      <table>
-        <tr>
-          <td><%= @users.name %></td>
-        </tr>
-        <tr>
-          <td><%= @users.address.city %>, <%= @users.address.state %></td>
-        </tr>
-        <tr>
-          <td><%= @users.occupation%></td>
-        </tr>
-        <tr>
-          <td><%=@users.description %></td>
-        </tr>
-      </table>
+          <h1 class="name"><%= @users.name %></h1>
+          <address><%= @users.address.city %>, <%= @users.address.state %></address>
+          <p><%= @users.occupation%></p>
+          <p><%=@users.description %></p>
     </div>
+
+    <button id="print">Print</button>
     <button id="toggle">Toggle Collapse</button>
   </div>
   <div id="experience" class="divisions">
@@ -60,12 +52,14 @@
           </span>
           <%=e.description%>
           <%unless e.link.nil? -%>
-            Link: <%= link_to "Project Link", e.link, class: "link"%><br/>
+            <br>Link: <%= link_to "Project Link", e.link, class: "link"%><br/>
           <%end%>
+          <hr>
         <%end%>
       </div>
     </details>
   </div>
+
   <div id="education" class="divisions">
     <details>
       <summary>Education</summary>
@@ -83,7 +77,6 @@
           <%else%>
             <%=e.grade%> (on scale of 4.0)<br/>
           <%end%>
-          <br>
           <hr>
         <%end%>
       </div>
@@ -93,7 +86,17 @@
     <details>
       <summary>Honors and Awards</summary>
       <div class="division_inside">
-        <% @education.each do |e| %>
+        <% @awards.each do |e| %>
+        <span class= "title"><%= e.title%><br/>
+          </span>
+          <%= e.issuer%><br/>
+          Description:<br/>
+          <div class="inside">
+           <%= e.description%><br/>
+          </div>
+          Start Year: <%=e.from.strftime("%Y")%><br/>
+          End Year: <%=e.to.strftime("%Y")%><br/>
+          <hr>
         <%end%>
       </div>
     </details>

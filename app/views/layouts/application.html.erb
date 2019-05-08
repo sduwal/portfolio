@@ -11,7 +11,22 @@
   <body>
     <%= yield %>
     <script>
+      let printbtn = document.getElementById("print");
+       
+      printbtn.addEventListener('click',()=>{
+      let details = document.querySelectorAll("details");
+      
+      details.forEach((each)=>{
+        each.setAttribute("open","open");
+
+      });
+      window.print();
+      });
+      
+      
+      
       let btn = document.getElementById("toggle");
+      
       
       btn.addEventListener('click',()=>{
       let details = document.querySelectorAll("details");

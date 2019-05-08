@@ -4,5 +4,6 @@ class UserControllerController < ApplicationController
         @experience= User.first.experience
         @education= User.first.education
         @projects=User.first.personalprojects
+        @awards=User.first.personalaward
     end
 end
