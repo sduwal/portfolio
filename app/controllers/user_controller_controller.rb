@@ -1,10 +1,9 @@
 class UserControllerController < ApplicationController
     def index
         @users= User.first
-        @user_address=Address.where(:id=>User.first.address_id).first
-        @experience= User.first.experience
-        @education= User.first.education
+        @experience= User.first.experiences
+        @education= User.first.educations
         @projects=User.first.personalprojects
-        @awards=User.first.personalaward
+        @awards=User.first.personalawards
     end
 end

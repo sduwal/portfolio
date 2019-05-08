@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_08_034436) do
+ActiveRecord::Schema.define(version: 2019_05_08_094349) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,8 +21,24 @@ ActiveRecord::Schema.define(version: 2019_05_08_034436) do
     t.string "city"
     t.string "state"
     t.integer "zipcode"
+    t.string "country"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "addresses_educations", id: false, force: :cascade do |t|
+    t.bigint "education_id", null: false
+    t.bigint "address_id", null: false
+  end
+
+  create_table "addresses_experiences", id: false, force: :cascade do |t|
+    t.bigint "experience_id", null: false
+    t.bigint "address_id", null: false
+  end
+
+  create_table "addresses_users", id: false, force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "address_id", null: false
   end
 
   create_table "educations", force: :cascade do |t|
@@ -31,30 +47,22 @@ ActiveRecord::Schema.define(version: 2019_05_08_034436) do
     t.string "field"
     t.date "from"
     t.date "to"
-    t.bigint "user_id"
-    t.bigint "address_id"
+    t.integer "user_id"
+    t.float "grade"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.float "grade"
-    t.bigint "addresses_id"
-    t.index ["address_id"], name: "index_educations_on_address_id"
-    t.index ["addresses_id"], name: "index_educations_on_addresses_id"
-    t.index ["user_id"], name: "index_educations_on_user_id"
   end
 
   create_table "experiences", force: :cascade do |t|
     t.string "title"
     t.string "company"
-    t.bigint "address_id"
     t.date "start"
     t.date "end"
-    t.bigint "user_id"
     t.string "description"
     t.string "link"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["address_id"], name: "index_experiences_on_address_id"
-    t.index ["user_id"], name: "index_experiences_on_user_id"
   end
 
   create_table "personalawards", force: :cascade do |t|
@@ -63,20 +71,18 @@ ActiveRecord::Schema.define(version: 2019_05_08_034436) do
     t.string "description"
     t.date "from"
     t.date "to"
-    t.bigint "user_id"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_personalawards_on_user_id"
   end
 
   create_table "personalprojects", force: :cascade do |t|
     t.string "name"
     t.string "link"
     t.string "description"
-    t.bigint "user_id"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_personalprojects_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -84,18 +90,9 @@ ActiveRecord::Schema.define(version: 2019_05_08_034436) do
     t.date "dob"
     t.string "description"
     t.string "occupation"
+    t.string "message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "address_id"
-    t.index ["address_id"], name: "index_users_on_address_id"
   end
 
-  add_foreign_key "educations", "addresses"
-  add_foreign_key "educations", "addresses", column: "addresses_id"
-  add_foreign_key "educations", "users"
-  add_foreign_key "experiences", "addresses"
-  add_foreign_key "experiences", "users"
-  add_foreign_key "personalawards", "users"
-  add_foreign_key "personalprojects", "users"
-  add_foreign_key "users", "addresses"
 end

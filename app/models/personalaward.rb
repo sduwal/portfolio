@@ -1,5 +1,3 @@
 class Personalaward < ApplicationRecord
-  belongs_to :user
-
-  validates :title, :issuer, :description, presence: true
+    belongs_to :user
 end

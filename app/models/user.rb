@@ -1,10 +1,11 @@
 class User < ApplicationRecord
-    has_many :experience
-    has_many :education
+    has_and_belongs_to_many :address
+    has_many :experiences
     has_many :personalprojects
-    has_many :personalaward
+    has_many :personalawards
+    has_many :educations
 
-    validates :name, :dob, presence: true
+    validates :name, :dob, :address, presence: true
     validate :dob, :validate_date
 
     def validate_date

@@ -1,5 +1,4 @@
 class Personalproject < ApplicationRecord
-  belongs_to :user
-
-  validates :name, :description, presence: true
+    belongs_to :user
+    validates :name, :description, presence: true
 end

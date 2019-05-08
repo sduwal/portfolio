@@ -5,13 +5,13 @@ one:
   street_2: MyString
   city: MyString
   state: MyString
-  zipcode: 
-  user: one
+  zipcode: 1
+  country: MyString
 
 two:
   street: MyString
   street_2: MyString
   city: MyString
   state: MyString
-  zipcode: 
-  user: two
+  zipcode: 1
+  country: MyString

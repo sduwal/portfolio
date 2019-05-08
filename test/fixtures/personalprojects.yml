@@ -4,10 +4,10 @@ one:
   name: MyString
   link: MyString
   description: MyString
-  user: one
+  user_id: 1
 
 two:
   name: MyString
   link: MyString
   description: MyString
-  user: two
+  user_id: 1

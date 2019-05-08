@@ -3,19 +3,17 @@
 one:
   title: MyString
   company: MyString
-  address: one
-  start: 2019-05-06
-  end: 2019-05-06
-  user: one
+  start: 2019-05-08
+  end: 2019-05-08
   description: MyString
   link: MyString
+  user_id: 1
 
 two:
   title: MyString
   company: MyString
-  address: two
-  start: 2019-05-06
-  end: 2019-05-06
-  user: two
+  start: 2019-05-08
+  end: 2019-05-08
   description: MyString
   link: MyString
+  user_id: 1

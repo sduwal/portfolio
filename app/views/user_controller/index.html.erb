@@ -5,8 +5,7 @@
     </div>
     <div id="description">
           <h1 class="name"><%= @users.name %></h1>
-          
-          <address><%= @user_address.city %>, <%= @user_address.state %></address>
+          <address><%=@users.address.first.city%>, <%=@users.address.first.state%><</address>
           <p><%= @users.occupation%></p>
           <p><%=@users.description %></p>
     </div>
@@ -22,7 +21,7 @@
           </span>
           <%= e.company%><br/>
           <tr>
-            <td><%= e.address.city %>, <%= e.address.state %></td>
+            <td><%= e.address.first.city %>, <%= e.address.first.state %></td>
           </tr>
           <br>
           Description: <br/>
