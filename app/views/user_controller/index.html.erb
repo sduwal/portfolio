@@ -5,95 +5,97 @@
     </div>
     <div id="description">
       <table>
-        <tr><td><%= @users.name %></td></tr>
-        <tr><td><%= @users.address.city %>, <%= @users.address.state %></td></tr>
-        <tr><td><%= @users.occupation%></td></tr>
-        <tr><td><%=@users.description %></td></tr>
+        <tr>
+          <td><%= @users.name %></td>
+        </tr>
+        <tr>
+          <td><%= @users.address.city %>, <%= @users.address.state %></td>
+        </tr>
+        <tr>
+          <td><%= @users.occupation%></td>
+        </tr>
+        <tr>
+          <td><%=@users.description %></td>
+        </tr>
       </table>
     </div>
-
     <button id="toggle">Toggle Collapse</button>
   </div>
-
   <div id="experience" class="divisions">
     <details>
-        <summary>Work History</summary>
-        <div class="division_inside">
+      <summary>Work History</summary>
+      <div class="division_inside">
         <% @experience.each do |e| %>
-            <span class= "title"><%= e.title%><br/></span>
-            <%= e.company%><br/>
-            <tr><td><%= e.address.city %>, <%= e.address.state %></td></tr>
-            <br>
-            Description: <br/>
-            <div class="inside">
-                <%= e.description.gsub(/\n/, '<br>').html_safe %><br/>
-            </div>
-            Start Date:<%=e.start.strftime("%B, %Y")%><br/>
-            
-            <%if e.end.nil? -%>
-                End Date: Current Job<br/>
-            <%else%>
-                End Date: <%= e.end.strftime("%B, %Y")%><br/>
-            <%end%>
-            
-            <%unless e.link.nil? -%>
-                Link: <%= link_to "Biology in a box", e.link, class: "link"%><br/>
-            <%end%>  
-            
-        <hr>
+          <span class= "title"><%= e.title%><br/>
+          </span>
+          <%= e.company%><br/>
+          <tr>
+            <td><%= e.address.city %>, <%= e.address.state %></td>
+          </tr>
+          <br>
+          Description: <br/>
+          <div class="inside">
+            <%= e.description.gsub(/\n/, '<br>').html_safe %><br/>
+          </div>
+          Start Date:<%=e.start.strftime("%B, %Y")%><br/>
+          <%if e.end.nil? -%>
+            End Date: Current Job<br/>
+          <%else%>
+            End Date: <%= e.end.strftime("%B, %Y")%><br/>
+          <%end%>
+          <%unless e.link.nil? -%>
+            Link: <%= link_to "Biology in a box", e.link, class: "link"%><br/>
+          <%end%>
+          <hr>
         <%end %>
-        </div>
-        </details>
+      </div>
+    </details>
   </div>
-
-
   <div id="project" class="divisions">
     <details>
-        <summary>Projects</summary>
-        <div class="division_inside">
-         <% @projects.each do |e| %>
-            <span class= "title"><%= e.name%><br/></span>
-            <%=e.description%>
-            
-            <%unless e.link.nil? -%>
-                Link: <%= link_to "Project Link", e.link, class: "link"%><br/>
-            <%end%>
-         <%end%>
-        </div>
+      <summary>Projects</summary>
+      <div class="division_inside">
+        <% @projects.each do |e| %>
+          <span class= "title"><%= e.name%><br/>
+          </span>
+          <%=e.description%>
+          <%unless e.link.nil? -%>
+            Link: <%= link_to "Project Link", e.link, class: "link"%><br/>
+          <%end%>
+        <%end%>
+      </div>
     </details>
   </div>
-
   <div id="education" class="divisions">
     <details>
-        <summary>Education</summary>
-        <div class="division_inside">
-             <% @education.each do |e| %>
-            <span class= "title"><%= e.school%><br/></span>
-            <%= e.degree%><br/>
-            <br/>
-            Field: <%= e.field%><br/>
-            Start Year: <%=e.from.strftime("%Y")%><br/>
-            End Year: <%=e.to.strftime("%Y")%><br/>
-            Grade: 
-             <%if e.grade>4.0 -%>
-                <%=e.grade%> (on scale of 100)<br/>
-            <%else%>
-                 <%=e.grade%> (on scale of 4.0)<br/>
-            <%end%>           
-            <br> <hr>
-            <%end%>
-        </div>
+      <summary>Education</summary>
+      <div class="division_inside">
+        <% @education.each do |e| %>
+          <span class= "title"><%= e.school%><br/>
+          </span>
+          <%= e.degree%><br/>
+          Field: <%= e.field%><br/>
+          Start Year: <%=e.from.strftime("%Y")%><br/>
+          End Year: <%=e.to.strftime("%Y")%><br/>
+          Grade: 
+          <%if e.grade>4.0 -%>
+            <%=e.grade%> (on scale of 100)<br/>
+          <%else%>
+            <%=e.grade%> (on scale of 4.0)<br/>
+          <%end%>
+          <br>
+          <hr>
+        <%end%>
+      </div>
     </details>
   </div>
-
-  <div id="honot" class="divisions">
+  <div id="honor" class="divisions">
     <details>
-        <summary>Honors and Awards</summary>
-        <div class="division_inside">
-             <% @education.each do |e| %>
-            
-            <%end%>
-        </div>
+      <summary>Honors and Awards</summary>
+      <div class="division_inside">
+        <% @education.each do |e| %>
+        <%end%>
+      </div>
     </details>
   </div>
 </div>

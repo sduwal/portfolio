@@ -15,10 +15,20 @@
       
       btn.addEventListener('click',()=>{
       let details = document.querySelectorAll("details");
+      let opened = false;
       details.forEach((each)=>{
-          each.toggleAttribute("open");
+        if (!opened)
+          opened=each.hasAttribute("open");
       });
-      })
+      details.forEach((each)=>{
+        if(opened){
+          each.removeAttribute("open");
+        }
+        else{
+          each.setAttribute("open", "open");
+        }
+      });
+      });
     </script>
   </body>
 </html>
