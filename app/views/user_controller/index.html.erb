@@ -1,5 +1,4 @@
 <div id="container">
-
   <div id="header">
     <div class="profile_pic">
       <%= image_tag("profile_pic.jpg") %>
@@ -12,6 +11,8 @@
         <tr><td><%=@users.description %></td></tr>
       </table>
     </div>
+
+    <button id="toggle">Toggle Collapse</button>
   </div>
 
   <div id="experience" class="divisions">
@@ -27,7 +28,6 @@
             <div class="inside">
                 <%= e.description.gsub(/\n/, '<br>').html_safe %><br/>
             </div>
-            <br>
             Start Date:<%=e.start.strftime("%B, %Y")%><br/>
             
             <%if e.end.nil? -%>
@@ -40,7 +40,7 @@
                 Link: <%= link_to "Biology in a box", e.link, class: "link"%><br/>
             <%end%>  
             
-        <br> <hr>
+        <hr>
         <%end %>
         </div>
         </details>
