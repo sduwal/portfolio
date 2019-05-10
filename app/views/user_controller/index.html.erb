@@ -7,7 +7,7 @@
           <h1 class="name"><%= @users.name %></h1>
           <address><%=@users.address.first.city%>, <%=@users.address.first.state%></address>
           <p><%= @users.occupation%></p>
-          <p>•	<%=@users.description %></p>
+          <p><%=@users.description %></p>
     </div>
 
     <button id="print">Print</button>
@@ -26,7 +26,7 @@
           <br>
           Description: <br/>
           <div class="inside">
-            <p>•	<%= e.description.gsub(/\n/, '<br>').html_safe %></p>
+            <p>•	<%= e.description.gsub(/\n/, '<br>•').html_safe %></p>
           </div>
           Start Date:<%=e.start.strftime("%B, %Y")%><br/>
           <%if e.end.nil? -%>
@@ -90,7 +90,7 @@
           <%= e.issuer%><br/>
           Description:<br/>
           <div class="inside">
-           <%= e.description%><br/>
+           <p>• <%= e.description%><p>
           </div>
           Start Year: <%=e.from.strftime("%Y")%><br/>
           End Year: <%=e.to.strftime("%Y")%><br/>
