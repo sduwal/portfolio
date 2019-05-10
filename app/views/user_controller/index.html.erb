@@ -5,9 +5,9 @@
     </div>
     <div id="description">
           <h1 class="name"><%= @users.name %></h1>
-          <address><%=@users.address.first.city%>, <%=@users.address.first.state%><</address>
+          <address><%=@users.address.first.city%>, <%=@users.address.first.state%></address>
           <p><%= @users.occupation%></p>
-          <p><%=@users.description %></p>
+          <p>•	<%=@users.description %></p>
     </div>
 
     <button id="print">Print</button>
@@ -26,7 +26,7 @@
           <br>
           Description: <br/>
           <div class="inside">
-            <%= e.description.gsub(/\n/, '<br>').html_safe %><br/>
+            <p>•	<%= e.description.gsub(/\n/, '<br>').html_safe %></p>
           </div>
           Start Date:<%=e.start.strftime("%B, %Y")%><br/>
           <%if e.end.nil? -%>
@@ -35,7 +35,7 @@
             End Date: <%= e.end.strftime("%B, %Y")%><br/>
           <%end%>
           <%unless e.link.nil? -%>
-            Link: <%= link_to "Biology in a box", e.link, class: "link"%><br/>
+            Link: <%= link_to "Project link", e.link, class: "link"%><br/>
           <%end%>
           <hr>
         <%end %>
@@ -48,7 +48,7 @@
         <% @projects.each do |e| %>
           <span class= "title"><%= e.name%><br/>
           </span>
-          <%=e.description%>
+          <p>•	<%=e.description%></p>
           <%unless e.link.nil? -%>
             <br>Link: <%= link_to "Project Link", e.link, class: "link"%><br/>
           <%end%>

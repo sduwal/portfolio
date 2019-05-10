@@ -146,3 +146,7 @@ button {
     margin-right:calc(var(--margin)/2);
     padding: 5px calc(var(--margin)/2);
 }
+
+p{
+    margin:0px;
+}

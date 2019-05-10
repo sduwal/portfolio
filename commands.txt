@@ -1,0 +1,39 @@
+rails g model user name:string dob:string description:string occupation:string message:string 
+
+rails g model address street:string street_2:string city:string state:string zipcode:integer country:string
+
+
+rails g migration CreateJoinTableUsersAddresses users addresses
+
+rails g model experience title:string company:string start:date end:date description:string link:string user_id:integer
+
+rails g migration CreateJoinTableExperiencesAddresses experiences addresses
+
+rails g model personalproject name:string link:string description:string user_id:integer
+
+rails g model personalaward title:string issuer:string description:string from:date to:date user_id:integer
+
+rails g model education school:string degree:string field:string from:date to:date user_id:integer grade:float
+
+rails g migration CreateJoinTableEducationsAddresses educations addresses
+
+Address.create(:street=>"2000 Lakeshore Dr.", :city=>"New Orleans",:state=>"LA", :zipcode=> 70148, :country=>"United States")
+
+a=User.new(:name =>"Saroj Duwal", :dob=>Date.new(1995,9,18),:description=>"Graduating Senior with passion for software development",:occupation=>"Student")
+a.address << Address.first
+a.save
+
+a=Experience.new(:title=>"Java Help Desk Tutor",:company=>"University of new Orleans",:start=>Date.new(2019),:end=>Date.new(2019,05,8), :description=>"Tutor",:user_id=>1)
+a.address << Address.first
+a.save
+
+a=Personalproject.create(:name=>"Youth Awakening Society", :description=>"Flutter based application",:user=>User.first)
+
+a=Education.new(:school=>"Univeristy of New Orleans", :degree=>"Bachelor's Degree", :field=>"Computer Science with minor in Mathematics", :from=>Date.new(2015),:to=>Date.new(2019),:user=>User.first, :grade=>4.0)
+a.addresses << Address.first
+a.save
+
+a=Personalaward.create(:title=>"Homer Hitt Scholar",:issuer=>"Univeristy of New Orleans", :description=>"Provided with full ride scholarship for 4 years of college",:from=>Date.new(2015),:to=>Date.new(2019),:user=>User.first)
+
+
+
