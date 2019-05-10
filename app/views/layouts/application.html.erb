@@ -1,49 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>Saroj Duwal</title>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <body>
-    <%= yield %>
-    <script>
-      let printbtn = document.getElementById("print");
-       
-      printbtn.addEventListener('click',()=>{
-      let details = document.querySelectorAll("details");
-      
-      details.forEach((each)=>{
-        each.setAttribute("open","open");
+        <%= csp_meta_tag %>
+            <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+                <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
-      });
-      window.print();
-      });
-      
-      
-      
-      let btn = document.getElementById("toggle");
-      
-      
-      btn.addEventListener('click',()=>{
-      let details = document.querySelectorAll("details");
-      let opened = false;
-      details.forEach((each)=>{
-        if (!opened)
-          opened=each.hasAttribute("open");
-      });
-      details.forEach((each)=>{
-        if(opened){
-          each.removeAttribute("open");
-        }
-        else{
-          each.setAttribute("open", "open");
-        }
-      });
-      });
-    </script>
-  </body>
+<body>
+    <%= yield %>
+</body>
+
 </html>
