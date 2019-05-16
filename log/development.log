@@ -13670,3 +13670,85 @@ Processing by PhotoController#photo as HTML
 Completed 200 OK in 84ms (Views: 80.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/photos" for ::1 at 2019-05-16 00:09:09 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/sduwal/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  Rendered photo/photo.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 352ms (Views: 341.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-16 00:09:12 -0500
+Processing by UserControllerController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:3
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:4
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:5
+  [1m[36mCACHE User Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:6
+  [1m[36mCACHE User Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:7
+  Rendering user_controller/index.html.erb within layouts/application
+  [1m[36mAddress Load (0.7ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" INNER JOIN "addresses_users" ON "addresses"."id" = "addresses_users"."address_id" WHERE "addresses_users"."user_id" = $1 ORDER BY "addresses"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user_controller/index.html.erb:12
+  [1m[36mCACHE Address Load (0.0ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" INNER JOIN "addresses_users" ON "addresses"."id" = "addresses_users"."address_id" WHERE "addresses_users"."user_id" = $1 ORDER BY "addresses"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user_controller/index.html.erb:12
+  [1m[36mExperience Load (1.0ms)[0m  [1m[34mSELECT "experiences".* FROM "experiences" WHERE "experiences"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/user_controller/index.html.erb:27
+  [1m[36mAddress Load (0.7ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" INNER JOIN "addresses_experiences" ON "addresses"."id" = "addresses_experiences"."address_id" WHERE "addresses_experiences"."experience_id" = $1 ORDER BY "addresses"."id" ASC LIMIT $2[0m  [["experience_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user_controller/index.html.erb:34
+  [1m[36mCACHE Address Load (0.0ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" INNER JOIN "addresses_experiences" ON "addresses"."id" = "addresses_experiences"."address_id" WHERE "addresses_experiences"."experience_id" = $1 ORDER BY "addresses"."id" ASC LIMIT $2[0m  [["experience_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user_controller/index.html.erb:34
+  [1m[36mPersonalproject Load (0.4ms)[0m  [1m[34mSELECT "personalprojects".* FROM "personalprojects" WHERE "personalprojects"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/user_controller/index.html.erb:65
+  [1m[36mEducation Load (1.0ms)[0m  [1m[34mSELECT "educations".* FROM "educations" WHERE "educations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/user_controller/index.html.erb:85
+  [1m[36mPersonalaward Load (0.6ms)[0m  [1m[34mSELECT "personalawards".* FROM "personalawards" WHERE "personalawards"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/user_controller/index.html.erb:114
+  Rendered user_controller/index.html.erb within layouts/application (259.7ms)
+Completed 200 OK in 542ms (Views: 267.1ms | ActiveRecord: 62.4ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 00:09:31 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  Rendered photo/photo.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 85ms (Views: 77.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-16 00:09:34 -0500
+Processing by UserControllerController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:3
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:4
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:5
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:6
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:7
+  Rendering user_controller/index.html.erb within layouts/application
+  [1m[36mAddress Load (1.3ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" INNER JOIN "addresses_users" ON "addresses"."id" = "addresses_users"."address_id" WHERE "addresses_users"."user_id" = $1 ORDER BY "addresses"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user_controller/index.html.erb:12
+  [1m[36mCACHE Address Load (0.1ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" INNER JOIN "addresses_users" ON "addresses"."id" = "addresses_users"."address_id" WHERE "addresses_users"."user_id" = $1 ORDER BY "addresses"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user_controller/index.html.erb:12
+  [1m[36mExperience Load (0.8ms)[0m  [1m[34mSELECT "experiences".* FROM "experiences" WHERE "experiences"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/user_controller/index.html.erb:27
+  [1m[36mAddress Load (1.1ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" INNER JOIN "addresses_experiences" ON "addresses"."id" = "addresses_experiences"."address_id" WHERE "addresses_experiences"."experience_id" = $1 ORDER BY "addresses"."id" ASC LIMIT $2[0m  [["experience_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user_controller/index.html.erb:34
+  [1m[36mCACHE Address Load (0.1ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" INNER JOIN "addresses_experiences" ON "addresses"."id" = "addresses_experiences"."address_id" WHERE "addresses_experiences"."experience_id" = $1 ORDER BY "addresses"."id" ASC LIMIT $2[0m  [["experience_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user_controller/index.html.erb:34
+  [1m[36mPersonalproject Load (0.9ms)[0m  [1m[34mSELECT "personalprojects".* FROM "personalprojects" WHERE "personalprojects"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/user_controller/index.html.erb:65
+  [1m[36mEducation Load (0.8ms)[0m  [1m[34mSELECT "educations".* FROM "educations" WHERE "educations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/user_controller/index.html.erb:85
+  [1m[36mPersonalaward Load (2.5ms)[0m  [1m[34mSELECT "personalawards".* FROM "personalawards" WHERE "personalawards"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/user_controller/index.html.erb:114
+  Rendered user_controller/index.html.erb within layouts/application (62.0ms)
+Completed 200 OK in 183ms (Views: 153.8ms | ActiveRecord: 8.7ms)
+
+
