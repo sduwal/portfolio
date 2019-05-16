@@ -6,9 +6,4 @@ class UserControllerController < ApplicationController
         @projects=User.first.personalprojects
         @awards=User.first.personalawards
     end
-
-    def photo
-    
-    end
-
 end

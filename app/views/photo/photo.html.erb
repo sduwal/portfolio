@@ -1,45 +1,16 @@
 <a href="/"> <i class="back material-icons" style="font-size:48px; color:white; position: fixed;">keyboard_backspace</i></a>
 <div id="container">
     <ul class="thumbnail">
-        <li class="">
-            <figure><img src="http://opyadav.com/assets/img/gallery/20.jpg">
-                <figcaption>BLah Blah Blah</figcaption>
-            </figure>
-        </li>
-        <li class="">
-            <figure><img src="https://lorempixel.com/500/500/cats/2">
-                <figcaption>BLah Blah Blah</figcaption>
-            </figure>
-        </li>
-        <li class="">
-            <figure><img src="https://lorempixel.com/500/500/cats/3">
-                <figcaption>BLah Blah Blah</figcaption>
-            </figure>
-        </li>
-        <li class="">
-            <figure><img src="https://lorempixel.com/500/500/cats/4">
-                <figcaption>BLah Blah Blah</figcaption>
-            </figure>
-        </li>
-        <li class="">
-            <figure>
-                <img src="https://lorempixel.com/500/500/cats/5">
-                <figcaption>BLah Blah Blah</figcaption>
-            </figure>
-        </li>
-
-        <li class="">
-            <figure>
-                <img src="https://lorempixel.com/500/500/cats/5">
-                <figcaption>BLah Blah Blah</figcaption>
-            </figure>
-        </li>
-        <li class="">
-            <figure>
-                <img src="https://lorempixel.com/500/500/cats/5">
-                <figcaption>BLah Blah Blah</figcaption>
-            </figure>
-        </li>
+        <% @photo.each do |e|%>
+            <li class="">
+                <figure>
+                    <%= image_tag e.link, :class=>"img"%>
+                        <figcaption>
+                            <%=e.description%>
+                        </figcaption>
+                </figure>
+            </li>
+            <% end %>
     </ul>
     <div class="slide">
         <button class="prev" onclick="prevImage()"><i class="back material-icons"
@@ -69,7 +40,7 @@
             }
             prev.classList.add("active");
             active.classList.remove("active");
-            insertToSlide(prev);
+            insertToSlide(next.children[0]);
         }
     }
 
@@ -82,7 +53,7 @@
             }
             next.classList.add("active");
             active.classList.remove("active");
-            insertToSlide(next);
+            insertToSlide(next.children[0]);
         }
     }
 
