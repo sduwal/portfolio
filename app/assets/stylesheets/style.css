@@ -252,12 +252,12 @@ p {
     border: 0;
 }
 
+.slide .img {
+    max-height: calc(100vh - 2 * var(--margin) - 3em);
+}
+
 .slide figure {
     margin: 0;
     background: white;
     padding: var(--margin);
-}
-
-.slide .img {
-    max-height: calc(100vh - 2 * var(--margin) - 3em);
 }
