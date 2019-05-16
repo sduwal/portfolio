@@ -1,0 +1,16 @@
+I, [2019-05-16T00:39:47.816111 #19263]  INFO -- : [82bf665e-4206-41db-93c1-7c640f9c07e8] Started GET "/" for 127.0.0.1 at 2019-05-16 00:39:47 -0500
+I, [2019-05-16T00:39:47.818223 #19263]  INFO -- : [82bf665e-4206-41db-93c1-7c640f9c07e8] Processing by UserControllerController#index as HTML
+I, [2019-05-16T00:39:47.830690 #19263]  INFO -- : [82bf665e-4206-41db-93c1-7c640f9c07e8] Completed 500 Internal Server Error in 12ms
+F, [2019-05-16T00:39:47.831684 #19263] FATAL -- : [82bf665e-4206-41db-93c1-7c640f9c07e8]   
+F, [2019-05-16T00:39:47.831782 #19263] FATAL -- : [82bf665e-4206-41db-93c1-7c640f9c07e8] PG::ConnectionBad (FATAL:  Peer authentication failed for user "project"
+):
+F, [2019-05-16T00:39:47.831863 #19263] FATAL -- : [82bf665e-4206-41db-93c1-7c640f9c07e8]   
+F, [2019-05-16T00:39:47.831911 #19263] FATAL -- : [82bf665e-4206-41db-93c1-7c640f9c07e8] app/controllers/user_controller_controller.rb:3:in `index'
+I, [2019-05-16T00:43:32.141294 #19513]  INFO -- : [cd68e8a5-9ec7-48fd-bba7-6d3c61b661f8] Started GET "/" for 127.0.0.1 at 2019-05-16 00:43:32 -0500
+I, [2019-05-16T00:43:32.144404 #19513]  INFO -- : [cd68e8a5-9ec7-48fd-bba7-6d3c61b661f8] Processing by UserControllerController#index as HTML
+I, [2019-05-16T00:43:32.191202 #19513]  INFO -- : [cd68e8a5-9ec7-48fd-bba7-6d3c61b661f8] Completed 500 Internal Server Error in 46ms
+F, [2019-05-16T00:43:32.196098 #19513] FATAL -- : [cd68e8a5-9ec7-48fd-bba7-6d3c61b661f8]   
+F, [2019-05-16T00:43:32.198962 #19513] FATAL -- : [cd68e8a5-9ec7-48fd-bba7-6d3c61b661f8] PG::ConnectionBad (FATAL:  Peer authentication failed for user "project"
+):
+F, [2019-05-16T00:43:32.199212 #19513] FATAL -- : [cd68e8a5-9ec7-48fd-bba7-6d3c61b661f8]   
+F, [2019-05-16T00:43:32.199379 #19513] FATAL -- : [cd68e8a5-9ec7-48fd-bba7-6d3c61b661f8] app/controllers/user_controller_controller.rb:3:in `index'
