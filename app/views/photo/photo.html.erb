@@ -1,0 +1,125 @@
+<a href="/"> <i class="back material-icons" style="font-size:48px; color:white; position: fixed;">keyboard_backspace</i></a>
+<div id="container">
+    <ul class="thumbnail">
+        <li class="">
+            <figure><img src="http://opyadav.com/assets/img/gallery/20.jpg">
+                <figcaption>BLah Blah Blah</figcaption>
+            </figure>
+        </li>
+        <li class="">
+            <figure><img src="https://lorempixel.com/500/500/cats/2">
+                <figcaption>BLah Blah Blah</figcaption>
+            </figure>
+        </li>
+        <li class="">
+            <figure><img src="https://lorempixel.com/500/500/cats/3">
+                <figcaption>BLah Blah Blah</figcaption>
+            </figure>
+        </li>
+        <li class="">
+            <figure><img src="https://lorempixel.com/500/500/cats/4">
+                <figcaption>BLah Blah Blah</figcaption>
+            </figure>
+        </li>
+        <li class="">
+            <figure>
+                <img src="https://lorempixel.com/500/500/cats/5">
+                <figcaption>BLah Blah Blah</figcaption>
+            </figure>
+        </li>
+
+        <li class="">
+            <figure>
+                <img src="https://lorempixel.com/500/500/cats/5">
+                <figcaption>BLah Blah Blah</figcaption>
+            </figure>
+        </li>
+        <li class="">
+            <figure>
+                <img src="https://lorempixel.com/500/500/cats/5">
+                <figcaption>BLah Blah Blah</figcaption>
+            </figure>
+        </li>
+    </ul>
+    <div class="slide">
+        <button class="prev" onclick="prevImage()"><i class="back material-icons"
+                style="font-size:48px; color:white;">navigate_before</i></button>
+        <figure>
+        </figure>
+        <button class="next" onclick="nextImage()"><i class="back material-icons"
+                style="font-size:48px; color:white;">navigate_next</i></button>
+
+    </div>
+    <div class="curtain">
+    </div>
+
+</div>
+
+<script>
+    let slide = document.querySelector(".slide");
+    let thumbnails = document.querySelector(".thumbnail");
+    let curtain = document.querySelector(".curtain");
+
+    function prevImage() {
+        if (slide.classList.contains("active")) {
+            let active = document.querySelector("li.active");
+            let prev = active.previousElementSibling;
+            if (prev == null) {
+                prev = document.querySelector(".thumbnail li:last-child");
+            }
+            prev.classList.add("active");
+            active.classList.remove("active");
+            insertToSlide(prev);
+        }
+    }
+
+    function nextImage() {
+        if (slide.classList.contains("active")) {
+            let active = document.querySelector("li.active");
+            let next = active.nextElementSibling;
+            if (next == null) {
+                next = document.querySelector(".thumbnail li");
+            }
+            next.classList.add("active");
+            active.classList.remove("active");
+            insertToSlide(next);
+        }
+    }
+
+    function insertToSlide(from) {
+        let figure = slide.children[1];
+        figure.innerHTML = from.innerHTML;
+    }
+
+    function activate(e) {
+        let p = e.target.parentElement;
+        insertToSlide(p);
+        p.parentElement.classList.add('active');
+        slide.classList.add("active");
+        thumbnails.classList.add("dark");
+        document.body.classList.add('frozen');
+        curtain.classList.add("shown");
+    }
+    let thumbs = document.querySelectorAll(".thumbnail li");
+    thumbs.forEach((t) => {
+        t.addEventListener("click", activate);
+    });
+
+    function closeSlide(e) {
+        document.body.classList.remove("frozen");
+        slide.classList.remove('active');
+        thumbnails.classList.remove("dark");
+        curtain.classList.remove("shown");
+    }
+    curtain.addEventListener("click", closeSlide);
+    window.addEventListener("keyup", (e) => {
+        const keyName = event.key;
+        if (keyName === 'ArrowRight') {
+            nextImage();
+        } else if (keyName === 'ArrowLeft') {
+            prevImage();
+        } else if (keyName === 'Escape') {
+            closeSlide(e);
+        }
+    });
+</script>

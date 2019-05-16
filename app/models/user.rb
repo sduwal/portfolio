@@ -4,6 +4,7 @@ class User < ApplicationRecord
     has_many :personalprojects
     has_many :personalawards
     has_many :educations
+    has_many :photos
 
     validates :name, :dob, :address, presence: true
     validate :dob, :validate_date
