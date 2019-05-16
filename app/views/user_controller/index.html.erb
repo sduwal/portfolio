@@ -1,148 +1,149 @@
 <%= javascript_include_tag 'main.js' %>
-    <div id="container" class="grid">
-        <div id="header">
-            <div class="profile_pic">
-                <%= image_tag("profile_pic.jpg") %>
-            </div>
+    <%= stylesheet_link_tag "frontpage" %>
+        <div id="container" class="grid">
+            <div id="header">
+                <div class="profile_pic">
+                    <%= image_tag("profile_pic.jpg") %>
+                </div>
 
-            <div id="description">
-                <h1 class="name">
-                    <%= @users.name %>
-                </h1>
-                <address><%=@users.address.first.city%>, <%=@users.address.first.state%></address>
-                <p>
-                    <%= @users.occupation%>
-                </p>
-                <p>
-                    <%=@users.description %>
-                </p>
-            </div>
-            <button id="print">Print</button>
-            <button id="toggle">Toggle Collapse</button>
-        </div>
-
-        <details id="experience" class="divisions" open>
-            <summary>Work History</summary>
-            <div class="division_inside">
-                <% @experience.each do |e| %>
-                    <p class="title">
-                        <%= e.title%>
+                <div id="description">
+                    <h1 class="name">
+                        <%= @users.name %>
+                    </h1>
+                    <address><%=@users.address.first.city%>, <%=@users.address.first.state%></address>
+                    <p>
+                        <%= @users.occupation%>
                     </p>
                     <p>
-                        <%= e.company%>
+                        <%=@users.description %>
                     </p>
-                    <address><%= e.address.first.city %>, <%= e.address.first.state %></address>
-                    <p> Description: </p>
-                    <div class="inside">
-                        <p>•
-                            <%= e.description.gsub(/\n/, '<br>• ').html_safe %>
+                </div>
+                <button id="print">Print</button>
+                <button id="toggle">Toggle Collapse</button>
+            </div>
+
+            <details id="experience" class="divisions" open>
+                <summary>Work History</summary>
+                <div class="division_inside">
+                    <% @experience.each do |e| %>
+                        <p class="title">
+                            <%= e.title%>
                         </p>
-                    </div>
-                    <p>Start Date:
-                        <%=e.start.strftime("%B, %Y")%>
-                    </p>
-                    <%if e.end.nil? -%>
-                        <p>End Date: Current Job</p>
-                        <%else%>
-                            <p>End Date:
-                                <%= e.end.strftime("%B, %Y")%>
+                        <p>
+                            <%= e.company%>
+                        </p>
+                        <address><%= e.address.first.city %>, <%= e.address.first.state %></address>
+                        <p> Description: </p>
+                        <div class="inside">
+                            <p>•
+                                <%= e.description.gsub(/\n/, '<br>• ').html_safe %>
                             </p>
-                            <%end%>
-                                <%unless e.link.nil? -%>
-                                    Link:
-                                    <p>
-                                        <%= link_to "Project link", e.link, class: "link"%>
-                                    </p>
-                                    <%end%>
-                                        <hr>
-                                        <%end %>
-            </div>
-        </details>
-
-        <details id="project" class="divisions">
-            <summary>Projects</summary>
-            <div class="division_inside">
-                <% @projects.each do |e| %>
-                    <p class="title">
-                        <%= e.name%>
-                    </p>
-                    <p>•
-                        <%=e.description%>
-                    </p>
-                    <%unless e.link.nil? -%>
-                        <p>Link:
-                            <%= link_to "Project Link", e.link, class: "link"%>
+                        </div>
+                        <p>Start Date:
+                            <%=e.start.strftime("%B, %Y")%>
                         </p>
-                        <%end%>
-                            <hr>
-                            <%end%>
-            </div>
-        </details>
+                        <%if e.end.nil? -%>
+                            <p>End Date: Current Job</p>
+                            <%else%>
+                                <p>End Date:
+                                    <%= e.end.strftime("%B, %Y")%>
+                                </p>
+                                <%end%>
+                                    <%unless e.link.nil? -%>
+                                        Link:
+                                        <p>
+                                            <%= link_to "Project link", e.link, class: "link"%>
+                                        </p>
+                                        <%end%>
+                                            <hr>
+                                            <%end %>
+                </div>
+            </details>
 
-        <details id="education" class="divisions">
-            <summary>Education</summary>
-            <div class="division_inside">
-                <% @education.each do |e| %>
-                    <p class="title">
-                        <%= e.school%>
-                    </p>
-                    <p>
-                        <%= e.degree%>
-                    </p>
-                    <p>Field:
-                        <%= e.field%>
-                    </p>
-                    <p>Start Year:
-                        <%=e.from.strftime("%Y")%>
-                    </p>
-                    <p>End Year:
-                        <%=e.to.strftime("%Y")%>
-                    </p>
-                    <p>Grade:
-                        <%if e.grade>4.0 -%>
-                            <%=e.grade%> (on scale of 100)</p>
-                    <%else%>
-                        <%=e.grade%> (on scale of 4.0)</p>
+            <details id="project" class="divisions">
+                <summary>Projects</summary>
+                <div class="division_inside">
+                    <% @projects.each do |e| %>
+                        <p class="title">
+                            <%= e.name%>
+                        </p>
+                        <p>•
+                            <%=e.description%>
+                        </p>
+                        <%unless e.link.nil? -%>
+                            <p>Link:
+                                <%= link_to "Project Link", e.link, class: "link"%>
+                            </p>
                             <%end%>
                                 <hr>
                                 <%end%>
-            </div>
-        </details>
-        <details id="honor" class="divisions">
-            <summary>Honors and Awards</summary>
-            <div class="division_inside">
-                <% @awards.each do |e| %>
-                    <p class="title">
-                        <%= e.title%>
-                    </p>
-                    </span>
-                    <p>
-                        <%= e.issuer%>
-                    </p>
-                    <p>Description:
-                    </p>
-                    <div class="inside">
-                        <p>•
-                            <%= e.description%>
-                                <p>
-                    </div>
-                    <p> Start Year:
-                        <%=e.from.strftime("%Y")%>
-                    </p>
-                    <p>End Year:
-                        <%=e.to.strftime("%Y")%>
-                    </p>
-                    <hr>
-                    <%end%>
-            </div>
-        </details>
+                </div>
+            </details>
 
-        <div id="footer">
-            <button onclick="window.open('/files/resume.pdf')" id="resume">Resume</button>
-            <button id="photography" onclick="location.href='/photos';">Photography</button>
-            <button onclick="location.href='https://www.linkedin.com/in/saroj-duwal/';">LinkedIn</button>
-            <button onclick="location.href='https://gitlab.com/sduwal';">Git</button>
+            <details id="education" class="divisions">
+                <summary>Education</summary>
+                <div class="division_inside">
+                    <% @education.each do |e| %>
+                        <p class="title">
+                            <%= e.school%>
+                        </p>
+                        <p>
+                            <%= e.degree%>
+                        </p>
+                        <p>Field:
+                            <%= e.field%>
+                        </p>
+                        <p>Start Year:
+                            <%=e.from.strftime("%Y")%>
+                        </p>
+                        <p>End Year:
+                            <%=e.to.strftime("%Y")%>
+                        </p>
+                        <p>Grade:
+                            <%if e.grade>4.0 -%>
+                                <%=e.grade%> (on scale of 100)</p>
+                        <%else%>
+                            <%=e.grade%> (on scale of 4.0)</p>
+                                <%end%>
+                                    <hr>
+                                    <%end%>
+                </div>
+            </details>
+            <details id="honor" class="divisions">
+                <summary>Honors and Awards</summary>
+                <div class="division_inside">
+                    <% @awards.each do |e| %>
+                        <p class="title">
+                            <%= e.title%>
+                        </p>
+                        </span>
+                        <p>
+                            <%= e.issuer%>
+                        </p>
+                        <p>Description:
+                        </p>
+                        <div class="inside">
+                            <p>•
+                                <%= e.description%>
+                                    <p>
+                        </div>
+                        <p> Start Year:
+                            <%=e.from.strftime("%Y")%>
+                        </p>
+                        <p>End Year:
+                            <%=e.to.strftime("%Y")%>
+                        </p>
+                        <hr>
+                        <%end%>
+                </div>
+            </details>
+
+            <div id="footer">
+                <button onclick="window.open('/files/resume.pdf')" id="resume">Resume</button>
+                <button id="photography" onclick="location.href='/photos';">Photography</button>
+                <button onclick="location.href='https://www.linkedin.com/in/saroj-duwal/';">LinkedIn</button>
+                <button onclick="location.href='https://gitlab.com/sduwal';">Git</button>
+
+            </div>
 
         </div>
-
-    </div>
