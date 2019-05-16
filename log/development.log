@@ -14749,3 +14749,156 @@ Processing by PhotoController#photo as HTML
 Completed 200 OK in 74ms (Views: 68.9ms | ActiveRecord: 1.6ms)
 
 
+Started GET "/" for ::1 at 2019-05-16 02:15:05 -0500
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/sduwal/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UserControllerController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:6
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:7
+  Rendering user_controller/index.html.erb within layouts/application
+  Rendered user_controller/index.html.erb within layouts/application (252.7ms)
+Completed 500 Internal Server Error in 505ms (ActiveRecord: 16.7ms)
+
+
+  
+ActionView::Template::Error (The asset "frontpage.css" is not present in the asset pipeline.):
+    1: <%= javascript_include_tag 'main.js' %>
+    2:     <%= stylesheet_link_tag "frontpage" %>
+    3:         <div id="container" class="grid">
+    4:             <div id="header">
+    5:                 <div class="profile_pic">
+  
+app/views/user_controller/index.html.erb:2:in `_app_views_user_controller_index_html_erb___3228944359292871558_47234562014900'
+Started GET "/" for ::1 at 2019-05-16 02:15:33 -0500
+Processing by UserControllerController#index as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:6
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:7
+  Rendering user_controller/index.html.erb within layouts/application
+  Rendered user_controller/index.html.erb within layouts/application (209.6ms)
+Completed 500 Internal Server Error in 233ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( style.css )` to `config/initializers/assets.rb` and restart your server):
+    1: <%= javascript_include_tag 'main.js' %>
+    2:     <%= stylesheet_link_tag "style.css" %>
+    3:         <div id="container" class="grid">
+    4:             <div id="header">
+    5:                 <div class="profile_pic">
+  
+app/views/user_controller/index.html.erb:2:in `_app_views_user_controller_index_html_erb___3228944359292871558_70236304943200'
+Started GET "/" for ::1 at 2019-05-16 02:15:34 -0500
+Processing by UserControllerController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:3
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:4
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:5
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:6
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:7
+  Rendering user_controller/index.html.erb within layouts/application
+  Rendered user_controller/index.html.erb within layouts/application (62.8ms)
+Completed 500 Internal Server Error in 100ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( style.css )` to `config/initializers/assets.rb` and restart your server):
+    1: <%= javascript_include_tag 'main.js' %>
+    2:     <%= stylesheet_link_tag "style.css" %>
+    3:         <div id="container" class="grid">
+    4:             <div id="header">
+    5:                 <div class="profile_pic">
+  
+app/views/user_controller/index.html.erb:2:in `_app_views_user_controller_index_html_erb___3228944359292871558_70236350299920'
+Started GET "/" for ::1 at 2019-05-16 02:16:15 -0500
+Processing by UserControllerController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:4
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:6
+  [1m[36mCACHE User Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:7
+  Rendering user_controller/index.html.erb within layouts/application
+  Rendered user_controller/index.html.erb within layouts/application (64.9ms)
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 2.2ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( style.css )` to `config/initializers/assets.rb` and restart your server):
+    1: <%= javascript_include_tag 'main.js' %>
+    2:     <%= stylesheet_link_tag "style.css" %>
+    3:         <div id="container" class="grid">
+    4:             <div id="header">
+    5:                 <div class="profile_pic">
+  
+app/views/user_controller/index.html.erb:2:in `_app_views_user_controller_index_html_erb___3228944359292871558_70236352292180'
+Started GET "/" for ::1 at 2019-05-16 02:16:26 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/sduwal/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UserControllerController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:5
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:7
+  Rendering user_controller/index.html.erb within layouts/application
+  [1m[36mAddress Load (0.6ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" INNER JOIN "addresses_users" ON "addresses"."id" = "addresses_users"."address_id" WHERE "addresses_users"."user_id" = $1 ORDER BY "addresses"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user_controller/index.html.erb:13
+  [1m[36mCACHE Address Load (0.0ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" INNER JOIN "addresses_users" ON "addresses"."id" = "addresses_users"."address_id" WHERE "addresses_users"."user_id" = $1 ORDER BY "addresses"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user_controller/index.html.erb:13
+  [1m[36mExperience Load (1.0ms)[0m  [1m[34mSELECT "experiences".* FROM "experiences" WHERE "experiences"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/user_controller/index.html.erb:28
+  [1m[36mAddress Load (0.9ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" INNER JOIN "addresses_experiences" ON "addresses"."id" = "addresses_experiences"."address_id" WHERE "addresses_experiences"."experience_id" = $1 ORDER BY "addresses"."id" ASC LIMIT $2[0m  [["experience_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user_controller/index.html.erb:35
+  [1m[36mCACHE Address Load (0.0ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" INNER JOIN "addresses_experiences" ON "addresses"."id" = "addresses_experiences"."address_id" WHERE "addresses_experiences"."experience_id" = $1 ORDER BY "addresses"."id" ASC LIMIT $2[0m  [["experience_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user_controller/index.html.erb:35
+  [1m[36mPersonalproject Load (0.4ms)[0m  [1m[34mSELECT "personalprojects".* FROM "personalprojects" WHERE "personalprojects"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/user_controller/index.html.erb:66
+  [1m[36mEducation Load (1.5ms)[0m  [1m[34mSELECT "educations".* FROM "educations" WHERE "educations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/user_controller/index.html.erb:86
+  [1m[36mPersonalaward Load (1.2ms)[0m  [1m[34mSELECT "personalawards".* FROM "personalawards" WHERE "personalawards"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/user_controller/index.html.erb:115
+  Rendered user_controller/index.html.erb within layouts/application (664.7ms)
+Completed 200 OK in 898ms (Views: 645.9ms | ActiveRecord: 62.3ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-16 02:16:31 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (1.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photo/photo.html.erb:5
+  Rendered photo/photo.html.erb within layouts/application (82.9ms)
+Completed 200 OK in 174ms (Views: 143.5ms | ActiveRecord: 18.4ms)
+
+
