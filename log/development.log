@@ -15219,3 +15219,329 @@ Processing by PhotoController#photo as HTML
 Completed 200 OK in 155ms (Views: 115.8ms | ActiveRecord: 29.1ms)
 
 
+Started GET "/" for ::1 at 2019-05-20 18:21:32 -0500
+Processing by UserControllerController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:7
+  Rendering user_controller/index.html.erb within layouts/application
+  [1m[36mAddress Load (0.8ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" INNER JOIN "addresses_users" ON "addresses"."id" = "addresses_users"."address_id" WHERE "addresses_users"."user_id" = $1 ORDER BY "addresses"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user_controller/index.html.erb:13
+  [1m[36mCACHE Address Load (0.0ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" INNER JOIN "addresses_users" ON "addresses"."id" = "addresses_users"."address_id" WHERE "addresses_users"."user_id" = $1 ORDER BY "addresses"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user_controller/index.html.erb:13
+  [1m[36mExperience Load (0.5ms)[0m  [1m[34mSELECT "experiences".* FROM "experiences" WHERE "experiences"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/user_controller/index.html.erb:28
+  [1m[36mAddress Load (0.6ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" INNER JOIN "addresses_experiences" ON "addresses"."id" = "addresses_experiences"."address_id" WHERE "addresses_experiences"."experience_id" = $1 ORDER BY "addresses"."id" ASC LIMIT $2[0m  [["experience_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user_controller/index.html.erb:35
+  [1m[36mCACHE Address Load (0.0ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" INNER JOIN "addresses_experiences" ON "addresses"."id" = "addresses_experiences"."address_id" WHERE "addresses_experiences"."experience_id" = $1 ORDER BY "addresses"."id" ASC LIMIT $2[0m  [["experience_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user_controller/index.html.erb:35
+  [1m[36mPersonalproject Load (0.6ms)[0m  [1m[34mSELECT "personalprojects".* FROM "personalprojects" WHERE "personalprojects"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/user_controller/index.html.erb:66
+  [1m[36mEducation Load (0.6ms)[0m  [1m[34mSELECT "educations".* FROM "educations" WHERE "educations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/user_controller/index.html.erb:86
+  [1m[36mPersonalaward Load (0.5ms)[0m  [1m[34mSELECT "personalawards".* FROM "personalawards" WHERE "personalawards"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/user_controller/index.html.erb:115
+  Rendered user_controller/index.html.erb within layouts/application (53.9ms)
+Completed 200 OK in 94ms (Views: 78.6ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-20 18:21:36 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (2.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photo/photo.html.erb:5
+  Rendered photo/photo.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 97ms (Views: 91.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-20 18:21:38 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (1.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photo/photo.html.erb:5
+  Rendered photo/photo.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 88ms (Views: 84.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-20 18:21:40 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photo/photo.html.erb:5
+  Rendered photo/photo.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 92ms (Views: 88.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-20 18:21:41 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (1.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photo/photo.html.erb:5
+  Rendered photo/photo.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 77ms (Views: 72.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-20 18:21:42 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (1.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photo/photo.html.erb:5
+  Rendered photo/photo.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 91ms (Views: 86.6ms | ActiveRecord: 1.3ms)
+
+
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+Started GET "/" for ::1 at 2019-05-20 18:22:04 -0500
+Processing by UserControllerController#index as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:5
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:7
+  Rendering user_controller/index.html.erb within layouts/application
+  [1m[36mAddress Load (2.0ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" INNER JOIN "addresses_users" ON "addresses"."id" = "addresses_users"."address_id" WHERE "addresses_users"."user_id" = $1 ORDER BY "addresses"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user_controller/index.html.erb:13
+  [1m[36mCACHE Address Load (0.0ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" INNER JOIN "addresses_users" ON "addresses"."id" = "addresses_users"."address_id" WHERE "addresses_users"."user_id" = $1 ORDER BY "addresses"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user_controller/index.html.erb:13
+  [1m[36mExperience Load (0.8ms)[0m  [1m[34mSELECT "experiences".* FROM "experiences" WHERE "experiences"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/user_controller/index.html.erb:28
+  [1m[36mAddress Load (1.3ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" INNER JOIN "addresses_experiences" ON "addresses"."id" = "addresses_experiences"."address_id" WHERE "addresses_experiences"."experience_id" = $1 ORDER BY "addresses"."id" ASC LIMIT $2[0m  [["experience_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user_controller/index.html.erb:35
+  [1m[36mCACHE Address Load (0.1ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" INNER JOIN "addresses_experiences" ON "addresses"."id" = "addresses_experiences"."address_id" WHERE "addresses_experiences"."experience_id" = $1 ORDER BY "addresses"."id" ASC LIMIT $2[0m  [["experience_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user_controller/index.html.erb:35
+  [1m[36mPersonalproject Load (2.4ms)[0m  [1m[34mSELECT "personalprojects".* FROM "personalprojects" WHERE "personalprojects"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/user_controller/index.html.erb:66
+  [1m[36mEducation Load (0.7ms)[0m  [1m[34mSELECT "educations".* FROM "educations" WHERE "educations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/user_controller/index.html.erb:86
+  [1m[36mPersonalaward Load (0.6ms)[0m  [1m[34mSELECT "personalawards".* FROM "personalawards" WHERE "personalawards"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/user_controller/index.html.erb:115
+  Rendered user_controller/index.html.erb within layouts/application (67.5ms)
+Completed 200 OK in 114ms (Views: 87.5ms | ActiveRecord: 11.0ms)
+
+
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" ORDER BY "photos"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPhoto Update (1.4ms)[0m  [1m[33mUPDATE "photos" SET "link" = $1, "updated_at" = $2 WHERE "photos"."id" = $3[0m  [["link", "http://lorempixel.com/600/600/"], ["updated_at", "2019-05-20 23:22:46.240893"], ["id", 1]]
+  [1m[35m (9.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/photos" for ::1 at 2019-05-20 18:22:49 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (3.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photo/photo.html.erb:5
+  Rendered photo/photo.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 108ms (Views: 100.0ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-20 18:22:52 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (1.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photo/photo.html.erb:5
+  Rendered photo/photo.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 102ms (Views: 98.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-20 18:23:09 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (2.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photo/photo.html.erb:5
+  Rendered photo/photo.html.erb within layouts/application (44.7ms)
+Completed 200 OK in 125ms (Views: 118.7ms | ActiveRecord: 2.8ms)
+
+
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" ORDER BY "photos"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPhoto Update (0.7ms)[0m  [1m[33mUPDATE "photos" SET "link" = $1, "updated_at" = $2 WHERE "photos"."id" = $3[0m  [["link", "http://lorempixel.com/600/600/"], ["updated_at", "2019-05-20 23:23:27.537782"], ["id", 2]]
+  [1m[35m (8.1ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/photos" for ::1 at 2019-05-20 18:23:28 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photo/photo.html.erb:5
+  Rendered photo/photo.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 72ms (Views: 68.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-20 18:23:36 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (1.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photo/photo.html.erb:5
+  Rendered photo/photo.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 125ms (Views: 119.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-20 18:23:40 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (2.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photo/photo.html.erb:5
+  Rendered photo/photo.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 133ms (Views: 126.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-20 18:23:43 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photo/photo.html.erb:5
+  Rendered photo/photo.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 103ms (Views: 98.2ms | ActiveRecord: 1.0ms)
+
+
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" ORDER BY "photos"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/photos" for ::1 at 2019-05-20 18:24:06 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photo/photo.html.erb:5
+  Rendered photo/photo.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 63ms (Views: 60.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-20 18:24:31 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photo/photo.html.erb:5
+  Rendered photo/photo.html.erb within layouts/application (34.7ms)
+Completed 200 OK in 123ms (Views: 119.6ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" ORDER BY "photos"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPhoto Update (0.9ms)[0m  [1m[33mUPDATE "photos" SET "link" = $1, "updated_at" = $2 WHERE "photos"."id" = $3[0m  [["link", "http://lorempixel.com/1000/1500/"], ["updated_at", "2019-05-20 23:25:06.037872"], ["id", 1]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/photos" for ::1 at 2019-05-20 18:25:09 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (1.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photo/photo.html.erb:5
+  Rendered photo/photo.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 91ms (Views: 85.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-20 18:25:11 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photo/photo.html.erb:5
+  Rendered photo/photo.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 71ms (Views: 67.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-20 18:25:58 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photo/photo.html.erb:5
+  Rendered photo/photo.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 136ms (Views: 131.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-20 18:25:59 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (1.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photo/photo.html.erb:5
+  Rendered photo/photo.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 94ms (Views: 89.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-20 18:26:20 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photo/photo.html.erb:5
+  Rendered photo/photo.html.erb within layouts/application (40.1ms)
+Completed 200 OK in 113ms (Views: 105.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-20 18:28:36 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (1.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photo/photo.html.erb:5
+  Rendered photo/photo.html.erb within layouts/application (34.6ms)
+Completed 200 OK in 111ms (Views: 103.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-20 18:30:36 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photo/photo.html.erb:5
+  Rendered photo/photo.html.erb within layouts/application (41.9ms)
+Completed 200 OK in 119ms (Views: 116.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-20 18:30:43 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (8.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photo/photo.html.erb:5
+  Rendered photo/photo.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 85ms (Views: 70.5ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-20 18:30:45 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (1.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photo/photo.html.erb:5
+  Rendered photo/photo.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 80ms (Views: 65.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-20 18:31:01 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (7.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photo/photo.html.erb:5
+  Rendered photo/photo.html.erb within layouts/application (39.7ms)
+Completed 200 OK in 137ms (Views: 119.1ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-20 18:31:31 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (8.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photo/photo.html.erb:5
+  Rendered photo/photo.html.erb within layouts/application (61.5ms)
+Completed 200 OK in 174ms (Views: 163.2ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-20 18:31:35 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photo/photo.html.erb:5
+  Rendered photo/photo.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 106ms (Views: 99.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-20 18:32:44 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (7.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ app/views/photo/photo.html.erb:5
+  Rendered photo/photo.html.erb within layouts/application (45.8ms)
+Completed 200 OK in 170ms (Views: 158.4ms | ActiveRecord: 7.7ms)
+
+

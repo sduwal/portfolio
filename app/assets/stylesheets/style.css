@@ -205,12 +205,18 @@ p {
 .thumbnail figure {
     margin: 0;
     cursor: pointer;
+    height: calc((var(--desktop)-var(--margin))/3);
+    width: calc((var(--desktop)-var(--margin))/3);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .thumbnail .img {
     display: block;
-    max-height: 400px;
-    max-width: 400px;
+    width: 100%;
+    height: auto;
 }
 
 .thumbnail figcaption {
