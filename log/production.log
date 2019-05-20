@@ -1,83 +1,48 @@
-I, [2019-05-16T00:39:47.816111 #19263]  INFO -- : [82bf665e-4206-41db-93c1-7c640f9c07e8] Started GET "/" for 127.0.0.1 at 2019-05-16 00:39:47 -0500
-I, [2019-05-16T00:39:47.818223 #19263]  INFO -- : [82bf665e-4206-41db-93c1-7c640f9c07e8] Processing by UserControllerController#index as HTML
-I, [2019-05-16T00:39:47.830690 #19263]  INFO -- : [82bf665e-4206-41db-93c1-7c640f9c07e8] Completed 500 Internal Server Error in 12ms
-F, [2019-05-16T00:39:47.831684 #19263] FATAL -- : [82bf665e-4206-41db-93c1-7c640f9c07e8]   
-F, [2019-05-16T00:39:47.831782 #19263] FATAL -- : [82bf665e-4206-41db-93c1-7c640f9c07e8] PG::ConnectionBad (FATAL:  Peer authentication failed for user "project"
+I, [2019-05-16T13:35:33.674471 #6932]  INFO -- : [b97a71a8-3e08-4a5c-bd73-9e547185f46c] Started GET "/" for 127.0.0.1 at 2019-05-16 13:35:33 -0500
+I, [2019-05-16T13:35:33.678309 #6932]  INFO -- : [b97a71a8-3e08-4a5c-bd73-9e547185f46c] Processing by UserControllerController#index as HTML
+I, [2019-05-16T13:35:33.717952 #6932]  INFO -- : [b97a71a8-3e08-4a5c-bd73-9e547185f46c] Completed 500 Internal Server Error in 39ms
+F, [2019-05-16T13:35:33.723581 #6932] FATAL -- : [b97a71a8-3e08-4a5c-bd73-9e547185f46c]   
+F, [2019-05-16T13:35:33.723996 #6932] FATAL -- : [b97a71a8-3e08-4a5c-bd73-9e547185f46c] PG::ConnectionBad (fe_sendauth: no password supplied
 ):
-F, [2019-05-16T00:39:47.831863 #19263] FATAL -- : [82bf665e-4206-41db-93c1-7c640f9c07e8]   
-F, [2019-05-16T00:39:47.831911 #19263] FATAL -- : [82bf665e-4206-41db-93c1-7c640f9c07e8] app/controllers/user_controller_controller.rb:3:in `index'
-I, [2019-05-16T00:43:32.141294 #19513]  INFO -- : [cd68e8a5-9ec7-48fd-bba7-6d3c61b661f8] Started GET "/" for 127.0.0.1 at 2019-05-16 00:43:32 -0500
-I, [2019-05-16T00:43:32.144404 #19513]  INFO -- : [cd68e8a5-9ec7-48fd-bba7-6d3c61b661f8] Processing by UserControllerController#index as HTML
-I, [2019-05-16T00:43:32.191202 #19513]  INFO -- : [cd68e8a5-9ec7-48fd-bba7-6d3c61b661f8] Completed 500 Internal Server Error in 46ms
-F, [2019-05-16T00:43:32.196098 #19513] FATAL -- : [cd68e8a5-9ec7-48fd-bba7-6d3c61b661f8]   
-F, [2019-05-16T00:43:32.198962 #19513] FATAL -- : [cd68e8a5-9ec7-48fd-bba7-6d3c61b661f8] PG::ConnectionBad (FATAL:  Peer authentication failed for user "project"
+F, [2019-05-16T13:35:33.724240 #6932] FATAL -- : [b97a71a8-3e08-4a5c-bd73-9e547185f46c]   
+F, [2019-05-16T13:35:33.724485 #6932] FATAL -- : [b97a71a8-3e08-4a5c-bd73-9e547185f46c] app/controllers/user_controller_controller.rb:3:in `index'
+I, [2019-05-16T13:36:41.861116 #7028]  INFO -- : [5ebc8bfb-7f29-4dc8-afa4-d6a1aa03e432] Started GET "/" for 127.0.0.1 at 2019-05-16 13:36:41 -0500
+I, [2019-05-16T13:36:41.864456 #7028]  INFO -- : [5ebc8bfb-7f29-4dc8-afa4-d6a1aa03e432] Processing by UserControllerController#index as HTML
+I, [2019-05-16T13:36:41.905917 #7028]  INFO -- : [5ebc8bfb-7f29-4dc8-afa4-d6a1aa03e432] Completed 500 Internal Server Error in 41ms
+F, [2019-05-16T13:36:41.909822 #7028] FATAL -- : [5ebc8bfb-7f29-4dc8-afa4-d6a1aa03e432]   
+F, [2019-05-16T13:36:41.910139 #7028] FATAL -- : [5ebc8bfb-7f29-4dc8-afa4-d6a1aa03e432] PG::ConnectionBad (fe_sendauth: no password supplied
 ):
-F, [2019-05-16T00:43:32.199212 #19513] FATAL -- : [cd68e8a5-9ec7-48fd-bba7-6d3c61b661f8]   
-F, [2019-05-16T00:43:32.199379 #19513] FATAL -- : [cd68e8a5-9ec7-48fd-bba7-6d3c61b661f8] app/controllers/user_controller_controller.rb:3:in `index'
-I, [2019-05-16T02:09:44.530124 #28969]  INFO -- : [50941def-a6db-4647-b585-66d47c78e358] Started GET "/photos" for 127.0.0.1 at 2019-05-16 02:09:44 -0500
-I, [2019-05-16T02:09:44.542110 #28969]  INFO -- : [50941def-a6db-4647-b585-66d47c78e358] Processing by PhotoController#photo as HTML
-I, [2019-05-16T02:09:44.573333 #28969]  INFO -- : [50941def-a6db-4647-b585-66d47c78e358]   Rendering photo/photo.html.erb within layouts/application
-I, [2019-05-16T02:09:44.600739 #28969]  INFO -- : [50941def-a6db-4647-b585-66d47c78e358]   Rendered photo/photo.html.erb within layouts/application (26.4ms)
-I, [2019-05-16T02:09:44.602339 #28969]  INFO -- : [50941def-a6db-4647-b585-66d47c78e358] Completed 500 Internal Server Error in 59ms
-F, [2019-05-16T02:09:44.610163 #28969] FATAL -- : [50941def-a6db-4647-b585-66d47c78e358]   
-F, [2019-05-16T02:09:44.610690 #28969] FATAL -- : [50941def-a6db-4647-b585-66d47c78e358] ActionView::Template::Error (FATAL:  Peer authentication failed for user "project"
+F, [2019-05-16T13:36:41.910357 #7028] FATAL -- : [5ebc8bfb-7f29-4dc8-afa4-d6a1aa03e432]   
+F, [2019-05-16T13:36:41.910529 #7028] FATAL -- : [5ebc8bfb-7f29-4dc8-afa4-d6a1aa03e432] app/controllers/user_controller_controller.rb:3:in `index'
+I, [2019-05-16T13:37:44.866345 #7165]  INFO -- : [81bc9450-4e60-470a-8268-cd24a71d1f11] Started GET "/" for 127.0.0.1 at 2019-05-16 13:37:44 -0500
+I, [2019-05-16T13:37:44.871077 #7165]  INFO -- : [81bc9450-4e60-470a-8268-cd24a71d1f11] Processing by UserControllerController#index as HTML
+I, [2019-05-16T13:37:44.914350 #7165]  INFO -- : [81bc9450-4e60-470a-8268-cd24a71d1f11] Completed 500 Internal Server Error in 42ms
+F, [2019-05-16T13:37:44.919459 #7165] FATAL -- : [81bc9450-4e60-470a-8268-cd24a71d1f11]   
+F, [2019-05-16T13:37:44.919838 #7165] FATAL -- : [81bc9450-4e60-470a-8268-cd24a71d1f11] PG::ConnectionBad (fe_sendauth: no password supplied
 ):
-F, [2019-05-16T02:09:44.611725 #28969] FATAL -- : [50941def-a6db-4647-b585-66d47c78e358]     1: <a href="/"> <i class="back material-icons" style="font-size:48px; color:white; position: fixed;">keyboard_backspace</i></a>
-[50941def-a6db-4647-b585-66d47c78e358]     2: <div id="container">
-[50941def-a6db-4647-b585-66d47c78e358]     3:     <ul class="thumbnail">
-[50941def-a6db-4647-b585-66d47c78e358]     4:         <% @photo.each do |e|%>
-[50941def-a6db-4647-b585-66d47c78e358]     5:             <li class="">
-[50941def-a6db-4647-b585-66d47c78e358]     6:                 <figure>
-[50941def-a6db-4647-b585-66d47c78e358]     7:                     <%= image_tag e.link, :class=>"img"%>
-F, [2019-05-16T02:09:44.611927 #28969] FATAL -- : [50941def-a6db-4647-b585-66d47c78e358]   
-F, [2019-05-16T02:09:44.612082 #28969] FATAL -- : [50941def-a6db-4647-b585-66d47c78e358] app/views/photo/photo.html.erb:4:in `_app_views_photo_photo_html_erb___3730567460110646434_47307687588140'
-I, [2019-05-16T02:09:48.296584 #28969]  INFO -- : [b3cff0fc-e071-4cb9-9d4c-09c11d42c9e3] Started GET "/" for 127.0.0.1 at 2019-05-16 02:09:48 -0500
-I, [2019-05-16T02:09:48.298898 #28969]  INFO -- : [b3cff0fc-e071-4cb9-9d4c-09c11d42c9e3] Processing by UserControllerController#index as HTML
-I, [2019-05-16T02:09:48.313579 #28969]  INFO -- : [b3cff0fc-e071-4cb9-9d4c-09c11d42c9e3] Completed 500 Internal Server Error in 14ms
-F, [2019-05-16T02:09:48.316520 #28969] FATAL -- : [b3cff0fc-e071-4cb9-9d4c-09c11d42c9e3]   
-F, [2019-05-16T02:09:48.316737 #28969] FATAL -- : [b3cff0fc-e071-4cb9-9d4c-09c11d42c9e3] PG::ConnectionBad (FATAL:  Peer authentication failed for user "project"
+F, [2019-05-16T13:37:44.920008 #7165] FATAL -- : [81bc9450-4e60-470a-8268-cd24a71d1f11]   
+F, [2019-05-16T13:37:44.920174 #7165] FATAL -- : [81bc9450-4e60-470a-8268-cd24a71d1f11] app/controllers/user_controller_controller.rb:3:in `index'
+I, [2019-05-16T13:37:46.095667 #7165]  INFO -- : [ed5a0f4d-28d9-424a-a181-73a79ce19954] Started GET "/" for 127.0.0.1 at 2019-05-16 13:37:46 -0500
+I, [2019-05-16T13:37:46.098048 #7165]  INFO -- : [ed5a0f4d-28d9-424a-a181-73a79ce19954] Processing by UserControllerController#index as HTML
+I, [2019-05-16T13:37:46.107101 #7165]  INFO -- : [ed5a0f4d-28d9-424a-a181-73a79ce19954] Completed 500 Internal Server Error in 9ms
+F, [2019-05-16T13:37:46.109617 #7165] FATAL -- : [ed5a0f4d-28d9-424a-a181-73a79ce19954]   
+F, [2019-05-16T13:37:46.109868 #7165] FATAL -- : [ed5a0f4d-28d9-424a-a181-73a79ce19954] PG::ConnectionBad (fe_sendauth: no password supplied
 ):
-F, [2019-05-16T02:09:48.316862 #28969] FATAL -- : [b3cff0fc-e071-4cb9-9d4c-09c11d42c9e3]   
-F, [2019-05-16T02:09:48.316960 #28969] FATAL -- : [b3cff0fc-e071-4cb9-9d4c-09c11d42c9e3] app/controllers/user_controller_controller.rb:3:in `index'
-I, [2019-05-16T02:10:06.265960 #28969]  INFO -- : [da4a829d-cdf2-470f-b0e6-3c964744e048] Started GET "/pp" for 127.0.0.1 at 2019-05-16 02:10:06 -0500
-F, [2019-05-16T02:10:06.268228 #28969] FATAL -- : [da4a829d-cdf2-470f-b0e6-3c964744e048]   
-F, [2019-05-16T02:10:06.268507 #28969] FATAL -- : [da4a829d-cdf2-470f-b0e6-3c964744e048] ActionController::RoutingError (No route matches [GET] "/pp"):
-F, [2019-05-16T02:10:06.268638 #28969] FATAL -- : [da4a829d-cdf2-470f-b0e6-3c964744e048]   
-F, [2019-05-16T02:10:06.268796 #28969] FATAL -- : [da4a829d-cdf2-470f-b0e6-3c964744e048] actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
-[da4a829d-cdf2-470f-b0e6-3c964744e048] actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-[da4a829d-cdf2-470f-b0e6-3c964744e048] railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
-[da4a829d-cdf2-470f-b0e6-3c964744e048] railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
-[da4a829d-cdf2-470f-b0e6-3c964744e048] activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
-[da4a829d-cdf2-470f-b0e6-3c964744e048] activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
-[da4a829d-cdf2-470f-b0e6-3c964744e048] activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
-[da4a829d-cdf2-470f-b0e6-3c964744e048] railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
-[da4a829d-cdf2-470f-b0e6-3c964744e048] actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-[da4a829d-cdf2-470f-b0e6-3c964744e048] actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-[da4a829d-cdf2-470f-b0e6-3c964744e048] rack (2.0.7) lib/rack/method_override.rb:22:in `call'
-[da4a829d-cdf2-470f-b0e6-3c964744e048] rack (2.0.7) lib/rack/runtime.rb:22:in `call'
-[da4a829d-cdf2-470f-b0e6-3c964744e048] activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-[da4a829d-cdf2-470f-b0e6-3c964744e048] actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
-[da4a829d-cdf2-470f-b0e6-3c964744e048] rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
-[da4a829d-cdf2-470f-b0e6-3c964744e048] railties (5.2.3) lib/rails/engine.rb:524:in `call'
-[da4a829d-cdf2-470f-b0e6-3c964744e048] puma (3.12.1) lib/puma/configuration.rb:227:in `call'
-[da4a829d-cdf2-470f-b0e6-3c964744e048] puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
-[da4a829d-cdf2-470f-b0e6-3c964744e048] puma (3.12.1) lib/puma/server.rb:474:in `process_client'
-[da4a829d-cdf2-470f-b0e6-3c964744e048] puma (3.12.1) lib/puma/server.rb:334:in `block in run'
-[da4a829d-cdf2-470f-b0e6-3c964744e048] puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
-I, [2019-05-16T02:10:10.433224 #28969]  INFO -- : [e68562bf-21b4-4da2-ad88-3745d69a5c06] Started GET "/photos" for 127.0.0.1 at 2019-05-16 02:10:10 -0500
-I, [2019-05-16T02:10:10.435084 #28969]  INFO -- : [e68562bf-21b4-4da2-ad88-3745d69a5c06] Processing by PhotoController#photo as HTML
-I, [2019-05-16T02:10:10.439460 #28969]  INFO -- : [e68562bf-21b4-4da2-ad88-3745d69a5c06]   Rendering photo/photo.html.erb within layouts/application
-I, [2019-05-16T02:10:10.456615 #28969]  INFO -- : [e68562bf-21b4-4da2-ad88-3745d69a5c06]   Rendered photo/photo.html.erb within layouts/application (16.8ms)
-I, [2019-05-16T02:10:10.457216 #28969]  INFO -- : [e68562bf-21b4-4da2-ad88-3745d69a5c06] Completed 500 Internal Server Error in 22ms
-F, [2019-05-16T02:10:10.460976 #28969] FATAL -- : [e68562bf-21b4-4da2-ad88-3745d69a5c06]   
-F, [2019-05-16T02:10:10.461233 #28969] FATAL -- : [e68562bf-21b4-4da2-ad88-3745d69a5c06] ActionView::Template::Error (FATAL:  Peer authentication failed for user "project"
+F, [2019-05-16T13:37:46.110028 #7165] FATAL -- : [ed5a0f4d-28d9-424a-a181-73a79ce19954]   
+F, [2019-05-16T13:37:46.110162 #7165] FATAL -- : [ed5a0f4d-28d9-424a-a181-73a79ce19954] app/controllers/user_controller_controller.rb:3:in `index'
+I, [2019-05-16T13:45:29.228485 #7424]  INFO -- : [f0b3458e-3aa8-4149-95ad-b50523e5d4b5] Started GET "/" for 127.0.0.1 at 2019-05-16 13:45:29 -0500
+I, [2019-05-16T13:45:29.230977 #7424]  INFO -- : [f0b3458e-3aa8-4149-95ad-b50523e5d4b5] Processing by UserControllerController#index as HTML
+I, [2019-05-16T13:45:29.260514 #7424]  INFO -- : [f0b3458e-3aa8-4149-95ad-b50523e5d4b5] Completed 500 Internal Server Error in 29ms
+F, [2019-05-16T13:45:29.264478 #7424] FATAL -- : [f0b3458e-3aa8-4149-95ad-b50523e5d4b5]   
+F, [2019-05-16T13:45:29.264785 #7424] FATAL -- : [f0b3458e-3aa8-4149-95ad-b50523e5d4b5] PG::ConnectionBad (fe_sendauth: no password supplied
 ):
-F, [2019-05-16T02:10:10.461815 #28969] FATAL -- : [e68562bf-21b4-4da2-ad88-3745d69a5c06]     1: <a href="/"> <i class="back material-icons" style="font-size:48px; color:white; position: fixed;">keyboard_backspace</i></a>
-[e68562bf-21b4-4da2-ad88-3745d69a5c06]     2: <div id="container">
-[e68562bf-21b4-4da2-ad88-3745d69a5c06]     3:     <ul class="thumbnail">
-[e68562bf-21b4-4da2-ad88-3745d69a5c06]     4:         <% @photo.each do |e|%>
-[e68562bf-21b4-4da2-ad88-3745d69a5c06]     5:             <li class="">
-[e68562bf-21b4-4da2-ad88-3745d69a5c06]     6:                 <figure>
-[e68562bf-21b4-4da2-ad88-3745d69a5c06]     7:                     <%= image_tag e.link, :class=>"img"%>
-F, [2019-05-16T02:10:10.461948 #28969] FATAL -- : [e68562bf-21b4-4da2-ad88-3745d69a5c06]   
-F, [2019-05-16T02:10:10.462089 #28969] FATAL -- : [e68562bf-21b4-4da2-ad88-3745d69a5c06] app/views/photo/photo.html.erb:4:in `_app_views_photo_photo_html_erb___3730567460110646434_47307687588140'
+F, [2019-05-16T13:45:29.265021 #7424] FATAL -- : [f0b3458e-3aa8-4149-95ad-b50523e5d4b5]   
+F, [2019-05-16T13:45:29.265181 #7424] FATAL -- : [f0b3458e-3aa8-4149-95ad-b50523e5d4b5] app/controllers/user_controller_controller.rb:3:in `index'
+I, [2019-05-16T13:45:30.524324 #7424]  INFO -- : [0a113553-c4f9-4598-89f3-ea11dcd7f9ac] Started GET "/" for 127.0.0.1 at 2019-05-16 13:45:30 -0500
+I, [2019-05-16T13:45:30.526634 #7424]  INFO -- : [0a113553-c4f9-4598-89f3-ea11dcd7f9ac] Processing by UserControllerController#index as HTML
+I, [2019-05-16T13:45:30.535299 #7424]  INFO -- : [0a113553-c4f9-4598-89f3-ea11dcd7f9ac] Completed 500 Internal Server Error in 8ms
+F, [2019-05-16T13:45:30.537991 #7424] FATAL -- : [0a113553-c4f9-4598-89f3-ea11dcd7f9ac]   
+F, [2019-05-16T13:45:30.538236 #7424] FATAL -- : [0a113553-c4f9-4598-89f3-ea11dcd7f9ac] PG::ConnectionBad (fe_sendauth: no password supplied
+):
+F, [2019-05-16T13:45:30.538394 #7424] FATAL -- : [0a113553-c4f9-4598-89f3-ea11dcd7f9ac]   
+F, [2019-05-16T13:45:30.538518 #7424] FATAL -- : [0a113553-c4f9-4598-89f3-ea11dcd7f9ac] app/controllers/user_controller_controller.rb:3:in `index'
