@@ -23,6 +23,7 @@
     --desktop: 960px;
     --bg: #222;
     --bg-light: #666;
+    --page-size: var(--desktop);
 }
 
 body {

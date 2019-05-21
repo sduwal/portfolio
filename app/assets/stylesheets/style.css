@@ -132,23 +132,6 @@ hr:last-child {
     display: none;
 }
 
-@media screen and (max-width: 720px) {
-    #container {
-        display: block;
-    }
-    .divisions {
-        margin-top: calc(var(--margin) / 2);
-    }
-    #description p {
-        max-width: 100%;
-    }
-    #footer #resume {
-        display: none;
-        margin: none;
-        padding: none;
-    }
-}
-
 button {
     cursor: pointer;
 }
@@ -204,8 +187,7 @@ p {
 .thumbnail figure {
     margin: 0;
     cursor: pointer;
-    width: calc((var(--desktop) - var(--margin))/3);
-    height: calc((var(--desktop)-var(--margin))/3);
+    height: calc((var(--page-size) - var(--margin))/3);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -267,4 +249,64 @@ p {
     margin: 0;
     background: white;
     padding: var(--margin);
+}
+
+nav {
+    text-align: center;
+    margin-top: var(--margin);
+}
+
+nav>span:first-child {
+    float: left;
+}
+
+nav span.current,
+nav span.gap,
+nav span a {
+    color: white;
+    text-decoration: none;
+    background: var(--bg-light);
+    padding: var(--small-margin);
+    border-radius: var(--margin);
+    margin: var(--small-margin);
+    display: inline-block;
+    min-width: 1.5em;
+}
+
+nav>span:last-child {
+    float: right;
+}
+
+.info {
+    color: var(--bg-light);
+    font-size: 0.8em;
+    text-align: center;
+}
+
+@media screen and (max-width: 720px) {
+    #container {
+        display: block;
+    }
+    .divisions {
+        margin-top: calc(var(--margin) / 2);
+    }
+    #description p {
+        max-width: 100%;
+    }
+    #footer #resume {
+        display: none;
+        margin: none;
+        padding: none;
+    }
+    .page,
+    .page.current,
+    .page.gap {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 960px) {
+     :root {
+        --page-size: 100vw;
+    }
 }
