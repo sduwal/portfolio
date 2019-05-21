@@ -9,7 +9,8 @@
 require 'csv'
     user=User.where(:id=>1).first
     raise StandardError, "Project not found." if user.nil?
-        
+    
+    Photo.destroy_all
     csv_text = File.read(Rails.root.join('lib', 'seeds', 'link.csv'))
 
     csv= CSV.parse(csv_text,
