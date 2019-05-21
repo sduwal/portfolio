@@ -34,9 +34,9 @@
     </div>
 
     <script>
-        let slide = document.querySelector(".slide");
-        let thumbnails = document.querySelector(".thumbnail");
-        let curtain = document.querySelector(".curtain");
+        slide = document.querySelector(".slide");
+        thumbnails = document.querySelector(".thumbnail");
+        curtain = document.querySelector(".curtain");
 
         function prevImage() {
             if (slide.classList.contains("active")) {
@@ -78,10 +78,8 @@
             document.body.classList.add('frozen');
             curtain.classList.add("shown");
         }
-        let thumbs = document.querySelectorAll(".thumbnail li");
-        thumbs.forEach((t) => {
-            t.addEventListener("click", activate);
-        });
+
+
 
         function closeSlide(e) {
             document.body.classList.remove("frozen");
@@ -99,5 +97,10 @@
             } else if (keyName === 'Escape') {
                 closeSlide(e);
             }
+        });
+        thumbs = document.querySelectorAll(".thumbnail li");
+        thumbs.forEach((t) => {
+            console.log(t);
+            t.addEventListener("click", activate);
         });
     </script>

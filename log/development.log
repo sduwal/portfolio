@@ -27085,3 +27085,852 @@ Processing by PhotoController#photo as HTML
 Completed 200 OK in 361ms (Views: 334.7ms | ActiveRecord: 6.4ms)
 
 
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/sduwal/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mPhoto Destroy (0.2ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = $1[0m  [["id", 1004]]
+  ↳ db/seeds.rb:13
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mPhoto Destroy (0.3ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = $1[0m  [["id", 1005]]
+  ↳ db/seeds.rb:13
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mPhoto Destroy (0.2ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = $1[0m  [["id", 1006]]
+  ↳ db/seeds.rb:13
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[36mPhoto Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1Jk0OiPVwYeBCQstweYU1ZBOdtEvK6NFH"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (2.5ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1Jk0OiPVwYeBCQstweYU1ZBOdtEvK6NFH"], ["description", " Shilloite New York Image"], ["created_at", "2019-05-21 05:11:18.139151"], ["updated_at", "2019-05-21 05:11:18.139151"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1CNkdtv6QsTt8zQbY8hz20HcolbLlqaag"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1CNkdtv6QsTt8zQbY8hz20HcolbLlqaag"], ["description", " Privateer Place"], ["created_at", "2019-05-21 05:11:18.147083"], ["updated_at", "2019-05-21 05:11:18.147083"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1sBstJg6GXw2gy7Zy_-1ckHneu4a5JXK1"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.4ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1sBstJg6GXw2gy7Zy_-1ckHneu4a5JXK1"], ["description", " Temples and Nepal"], ["created_at", "2019-05-21 05:11:18.152092"], ["updated_at", "2019-05-21 05:11:18.152092"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1UnPrOvt3UBtgP9qZbU3-ikG3v7FTbolF"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.6ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1UnPrOvt3UBtgP9qZbU3-ikG3v7FTbolF"], ["description", " Beautiful Bhaktapur"], ["created_at", "2019-05-21 05:11:18.158330"], ["updated_at", "2019-05-21 05:11:18.158330"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1sv29I_yqfFMgx9wHzA-6i1lQYbep3aL6"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1sv29I_yqfFMgx9wHzA-6i1lQYbep3aL6"], ["description", " Naytapole Temple"], ["created_at", "2019-05-21 05:11:18.165655"], ["updated_at", "2019-05-21 05:11:18.165655"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1sprIqD76eBYEUI0bRW1j7W-ysFDisRVJ"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1sprIqD76eBYEUI0bRW1j7W-ysFDisRVJ"], ["description", " Ponchartrain Lake"], ["created_at", "2019-05-21 05:11:18.170434"], ["updated_at", "2019-05-21 05:11:18.170434"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1cWrs7NKL6wbxI57L7CP1MQ1F9bMljikS"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1cWrs7NKL6wbxI57L7CP1MQ1F9bMljikS"], ["description", " Fish Tail Mountain"], ["created_at", "2019-05-21 05:11:18.175518"], ["updated_at", "2019-05-21 05:11:18.175518"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1z3CimA3EWUXVLZD6OBE2kIc2B5sluMaW"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.2ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1z3CimA3EWUXVLZD6OBE2kIc2B5sluMaW"], ["description", " Trekking in Nepal"], ["created_at", "2019-05-21 05:11:18.180002"], ["updated_at", "2019-05-21 05:11:18.180002"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1DuogCdMBy4w5O3R-9Gt6IGuvq_2v0F4l"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1DuogCdMBy4w5O3R-9Gt6IGuvq_2v0F4l"], ["description", " Sunset in Ponchartrain"], ["created_at", "2019-05-21 05:11:18.184311"], ["updated_at", "2019-05-21 05:11:18.184311"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1hLkqklu2E1kRhQpOJuVx-sJsM5PQu_ol"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.2ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1hLkqklu2E1kRhQpOJuVx-sJsM5PQu_ol"], ["description", " Chilling in Ponchartrain"], ["created_at", "2019-05-21 05:11:18.188860"], ["updated_at", "2019-05-21 05:11:18.188860"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1pJTIJeO01fsDGFP6SFWVqkGD5CGiIQiw"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1pJTIJeO01fsDGFP6SFWVqkGD5CGiIQiw"], ["description", " Shilloite Ponchartrain"], ["created_at", "2019-05-21 05:11:18.193321"], ["updated_at", "2019-05-21 05:11:18.193321"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=18oXPMWNjiW9Gl2zfVoA-ZIu4RfjtgHAY"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.2ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=18oXPMWNjiW9Gl2zfVoA-ZIu4RfjtgHAY"], ["description", " Light Streaks "], ["created_at", "2019-05-21 05:11:18.197806"], ["updated_at", "2019-05-21 05:11:18.197806"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1X1Y4a6oRY47FiRWmx_2jmk5olH1cJZji"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1X1Y4a6oRY47FiRWmx_2jmk5olH1cJZji"], ["description", " Central Park"], ["created_at", "2019-05-21 05:11:18.202318"], ["updated_at", "2019-05-21 05:11:18.202318"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1KBxqOi_YKUJaJGNEr-YwncbffCArBhTx"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1KBxqOi_YKUJaJGNEr-YwncbffCArBhTx"], ["description", " New York"], ["created_at", "2019-05-21 05:11:18.206904"], ["updated_at", "2019-05-21 05:11:18.206904"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1w9ad5MdElv3Ysr-Yer9ZfwuTWboEQY8H"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.2ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1w9ad5MdElv3Ysr-Yer9ZfwuTWboEQY8H"], ["description", " Shilloite Ponchartrain"], ["created_at", "2019-05-21 05:11:18.211611"], ["updated_at", "2019-05-21 05:11:18.211611"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1aJH4ts32vhZF18Udm4vQKbsCvjhBjGcr"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1aJH4ts32vhZF18Udm4vQKbsCvjhBjGcr"], ["description", " New York in Black and White"], ["created_at", "2019-05-21 05:11:18.216574"], ["updated_at", "2019-05-21 05:11:18.216574"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1QvFGJcWcWpE1RkQRu4t4deYTSPeccjJi"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1QvFGJcWcWpE1RkQRu4t4deYTSPeccjJi"], ["description", " Two birds on a lamp"], ["created_at", "2019-05-21 05:11:18.221806"], ["updated_at", "2019-05-21 05:11:18.221806"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=11qWi0J-DjioGYZLZHQSbiuEW13IPohEg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.2ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=11qWi0J-DjioGYZLZHQSbiuEW13IPohEg"], ["description", " View From the top of Empire State"], ["created_at", "2019-05-21 05:11:18.226398"], ["updated_at", "2019-05-21 05:11:18.226398"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=18_Fe1zZ_ycV5_Ou6t0RBq9IcykqzwxYx"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=18_Fe1zZ_ycV5_Ou6t0RBq9IcykqzwxYx"], ["description", " Central Park"], ["created_at", "2019-05-21 05:11:18.230524"], ["updated_at", "2019-05-21 05:11:18.230524"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=13-RYaTV0gBKp3mpWixtnSe6qY7SpmKI4"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=13-RYaTV0gBKp3mpWixtnSe6qY7SpmKI4"], ["description", " Central Park"], ["created_at", "2019-05-21 05:11:18.235729"], ["updated_at", "2019-05-21 05:11:18.235729"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1FKrK4f1BkacE-tZMnUEhYpNJb0sn0Ok_"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.2ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1FKrK4f1BkacE-tZMnUEhYpNJb0sn0Ok_"], ["description", " Brookyln Bridge"], ["created_at", "2019-05-21 05:11:18.240213"], ["updated_at", "2019-05-21 05:11:18.240213"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1DjuoV3J0v15_VFDFPwGuL3yGt__JAVfU"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.2ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1DjuoV3J0v15_VFDFPwGuL3yGt__JAVfU"], ["description", " Anime Vibes"], ["created_at", "2019-05-21 05:11:18.244780"], ["updated_at", "2019-05-21 05:11:18.244780"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1KEtgNbFpVRJUR4_mUay0U4HIojXCLA5A"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1KEtgNbFpVRJUR4_mUay0U4HIojXCLA5A"], ["description", " New York Skyline"], ["created_at", "2019-05-21 05:11:18.249723"], ["updated_at", "2019-05-21 05:11:18.249723"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1rT4UWd3vzbYXQ-h3ZU5Pt9Sibfzpciuy"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.2ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1rT4UWd3vzbYXQ-h3ZU5Pt9Sibfzpciuy"], ["description", " Shilloite Ponchartrain"], ["created_at", "2019-05-21 05:11:18.254041"], ["updated_at", "2019-05-21 05:11:18.254041"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1wjDLHL_6qyNg_PTVzgPDHX-oT7BhCyrj"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1wjDLHL_6qyNg_PTVzgPDHX-oT7BhCyrj"], ["description", " University of New Orleans"], ["created_at", "2019-05-21 05:11:18.258454"], ["updated_at", "2019-05-21 05:11:18.258454"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/sduwal/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mPhoto Destroy (0.2ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = $1[0m  [["id", 1007]]
+  ↳ db/seeds.rb:13
+  [1m[35m (7.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mPhoto Destroy (0.4ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = $1[0m  [["id", 1008]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mPhoto Destroy (0.2ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = $1[0m  [["id", 1009]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mPhoto Destroy (0.2ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = $1[0m  [["id", 1010]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mPhoto Destroy (0.2ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = $1[0m  [["id", 1011]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mPhoto Destroy (0.2ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = $1[0m  [["id", 1012]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mPhoto Destroy (0.4ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = $1[0m  [["id", 1013]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mPhoto Destroy (0.3ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = $1[0m  [["id", 1014]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mPhoto Destroy (0.2ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = $1[0m  [["id", 1015]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mPhoto Destroy (0.2ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = $1[0m  [["id", 1016]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mPhoto Destroy (0.2ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = $1[0m  [["id", 1017]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mPhoto Destroy (0.2ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = $1[0m  [["id", 1018]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mPhoto Destroy (0.2ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = $1[0m  [["id", 1019]]
+  ↳ db/seeds.rb:13
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mPhoto Destroy (0.2ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = $1[0m  [["id", 1020]]
+  ↳ db/seeds.rb:13
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mPhoto Destroy (0.3ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = $1[0m  [["id", 1021]]
+  ↳ db/seeds.rb:13
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mPhoto Destroy (0.2ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = $1[0m  [["id", 1022]]
+  ↳ db/seeds.rb:13
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mPhoto Destroy (0.2ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = $1[0m  [["id", 1023]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mPhoto Destroy (0.2ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = $1[0m  [["id", 1024]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mPhoto Destroy (0.2ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = $1[0m  [["id", 1025]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mPhoto Destroy (0.2ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = $1[0m  [["id", 1026]]
+  ↳ db/seeds.rb:13
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mPhoto Destroy (0.2ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = $1[0m  [["id", 1027]]
+  ↳ db/seeds.rb:13
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mPhoto Destroy (0.2ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = $1[0m  [["id", 1028]]
+  ↳ db/seeds.rb:13
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mPhoto Destroy (0.2ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = $1[0m  [["id", 1029]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mPhoto Destroy (0.1ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = $1[0m  [["id", 1030]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mPhoto Destroy (0.2ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = $1[0m  [["id", 1031]]
+  ↳ db/seeds.rb:13
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[36mPhoto Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1Jk0OiPVwYeBCQstweYU1ZBOdtEvK6NFH"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.4ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1Jk0OiPVwYeBCQstweYU1ZBOdtEvK6NFH"], ["description", " Shilloite New York Image"], ["created_at", "2019-05-21 05:11:30.549638"], ["updated_at", "2019-05-21 05:11:30.549638"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1CNkdtv6QsTt8zQbY8hz20HcolbLlqaag"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.2ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1CNkdtv6QsTt8zQbY8hz20HcolbLlqaag"], ["description", " Privateer Place"], ["created_at", "2019-05-21 05:11:30.554017"], ["updated_at", "2019-05-21 05:11:30.554017"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1sBstJg6GXw2gy7Zy_-1ckHneu4a5JXK1"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (1.3ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1sBstJg6GXw2gy7Zy_-1ckHneu4a5JXK1"], ["description", " Temples and Nepal"], ["created_at", "2019-05-21 05:11:30.565688"], ["updated_at", "2019-05-21 05:11:30.565688"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1UnPrOvt3UBtgP9qZbU3-ikG3v7FTbolF"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.2ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1UnPrOvt3UBtgP9qZbU3-ikG3v7FTbolF"], ["description", " Beautiful Bhaktapur"], ["created_at", "2019-05-21 05:11:30.571140"], ["updated_at", "2019-05-21 05:11:30.571140"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1sv29I_yqfFMgx9wHzA-6i1lQYbep3aL6"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1sv29I_yqfFMgx9wHzA-6i1lQYbep3aL6"], ["description", " Naytapole Temple"], ["created_at", "2019-05-21 05:11:30.575555"], ["updated_at", "2019-05-21 05:11:30.575555"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1sprIqD76eBYEUI0bRW1j7W-ysFDisRVJ"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1sprIqD76eBYEUI0bRW1j7W-ysFDisRVJ"], ["description", " Ponchartrain Lake"], ["created_at", "2019-05-21 05:11:30.580186"], ["updated_at", "2019-05-21 05:11:30.580186"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1cWrs7NKL6wbxI57L7CP1MQ1F9bMljikS"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.2ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1cWrs7NKL6wbxI57L7CP1MQ1F9bMljikS"], ["description", " Fish Tail Mountain"], ["created_at", "2019-05-21 05:11:30.585014"], ["updated_at", "2019-05-21 05:11:30.585014"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1z3CimA3EWUXVLZD6OBE2kIc2B5sluMaW"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.2ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1z3CimA3EWUXVLZD6OBE2kIc2B5sluMaW"], ["description", " Trekking in Nepal"], ["created_at", "2019-05-21 05:11:30.589231"], ["updated_at", "2019-05-21 05:11:30.589231"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1DuogCdMBy4w5O3R-9Gt6IGuvq_2v0F4l"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.2ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1DuogCdMBy4w5O3R-9Gt6IGuvq_2v0F4l"], ["description", " Sunset in Ponchartrain"], ["created_at", "2019-05-21 05:11:30.593516"], ["updated_at", "2019-05-21 05:11:30.593516"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1hLkqklu2E1kRhQpOJuVx-sJsM5PQu_ol"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1hLkqklu2E1kRhQpOJuVx-sJsM5PQu_ol"], ["description", " Chilling in Ponchartrain"], ["created_at", "2019-05-21 05:11:30.598398"], ["updated_at", "2019-05-21 05:11:30.598398"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1pJTIJeO01fsDGFP6SFWVqkGD5CGiIQiw"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.2ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1pJTIJeO01fsDGFP6SFWVqkGD5CGiIQiw"], ["description", " Shilloite Ponchartrain"], ["created_at", "2019-05-21 05:11:30.602833"], ["updated_at", "2019-05-21 05:11:30.602833"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=18oXPMWNjiW9Gl2zfVoA-ZIu4RfjtgHAY"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.2ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=18oXPMWNjiW9Gl2zfVoA-ZIu4RfjtgHAY"], ["description", " Light Streaks "], ["created_at", "2019-05-21 05:11:30.607005"], ["updated_at", "2019-05-21 05:11:30.607005"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1X1Y4a6oRY47FiRWmx_2jmk5olH1cJZji"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.2ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1X1Y4a6oRY47FiRWmx_2jmk5olH1cJZji"], ["description", " Central Park"], ["created_at", "2019-05-21 05:11:30.611158"], ["updated_at", "2019-05-21 05:11:30.611158"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1KBxqOi_YKUJaJGNEr-YwncbffCArBhTx"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.2ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1KBxqOi_YKUJaJGNEr-YwncbffCArBhTx"], ["description", " New York"], ["created_at", "2019-05-21 05:11:30.615707"], ["updated_at", "2019-05-21 05:11:30.615707"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1w9ad5MdElv3Ysr-Yer9ZfwuTWboEQY8H"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.2ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1w9ad5MdElv3Ysr-Yer9ZfwuTWboEQY8H"], ["description", " Shilloite Ponchartrain"], ["created_at", "2019-05-21 05:11:30.619574"], ["updated_at", "2019-05-21 05:11:30.619574"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (15.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1aJH4ts32vhZF18Udm4vQKbsCvjhBjGcr"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.2ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1aJH4ts32vhZF18Udm4vQKbsCvjhBjGcr"], ["description", " New York in Black and White"], ["created_at", "2019-05-21 05:11:30.636692"], ["updated_at", "2019-05-21 05:11:30.636692"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1QvFGJcWcWpE1RkQRu4t4deYTSPeccjJi"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.2ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1QvFGJcWcWpE1RkQRu4t4deYTSPeccjJi"], ["description", " Two birds on a lamp"], ["created_at", "2019-05-21 05:11:30.642544"], ["updated_at", "2019-05-21 05:11:30.642544"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=11qWi0J-DjioGYZLZHQSbiuEW13IPohEg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=11qWi0J-DjioGYZLZHQSbiuEW13IPohEg"], ["description", " View From the top of Empire State"], ["created_at", "2019-05-21 05:11:30.646872"], ["updated_at", "2019-05-21 05:11:30.646872"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=18_Fe1zZ_ycV5_Ou6t0RBq9IcykqzwxYx"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.2ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=18_Fe1zZ_ycV5_Ou6t0RBq9IcykqzwxYx"], ["description", " Central Park"], ["created_at", "2019-05-21 05:11:30.650311"], ["updated_at", "2019-05-21 05:11:30.650311"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=13-RYaTV0gBKp3mpWixtnSe6qY7SpmKI4"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.2ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=13-RYaTV0gBKp3mpWixtnSe6qY7SpmKI4"], ["description", " Central Park"], ["created_at", "2019-05-21 05:11:30.653105"], ["updated_at", "2019-05-21 05:11:30.653105"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1FKrK4f1BkacE-tZMnUEhYpNJb0sn0Ok_"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.2ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1FKrK4f1BkacE-tZMnUEhYpNJb0sn0Ok_"], ["description", " Brookyln Bridge"], ["created_at", "2019-05-21 05:11:30.655781"], ["updated_at", "2019-05-21 05:11:30.655781"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1DjuoV3J0v15_VFDFPwGuL3yGt__JAVfU"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.2ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1DjuoV3J0v15_VFDFPwGuL3yGt__JAVfU"], ["description", " Anime Vibes"], ["created_at", "2019-05-21 05:11:30.658532"], ["updated_at", "2019-05-21 05:11:30.658532"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1KEtgNbFpVRJUR4_mUay0U4HIojXCLA5A"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.2ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1KEtgNbFpVRJUR4_mUay0U4HIojXCLA5A"], ["description", " New York Skyline"], ["created_at", "2019-05-21 05:11:30.661220"], ["updated_at", "2019-05-21 05:11:30.661220"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1rT4UWd3vzbYXQ-h3ZU5Pt9Sibfzpciuy"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.4ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1rT4UWd3vzbYXQ-h3ZU5Pt9Sibfzpciuy"], ["description", " Shilloite Ponchartrain"], ["created_at", "2019-05-21 05:11:30.664027"], ["updated_at", "2019-05-21 05:11:30.664027"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "photos" WHERE "photos"."link" = $1 LIMIT $2[0m  [["link", "https://docs.google.com/uc?export=download&id=1wjDLHL_6qyNg_PTVzgPDHX-oT7BhCyrj"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mPhoto Create (0.2ms)[0m  [1m[32mINSERT INTO "photos" ("link", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["link", "https://docs.google.com/uc?export=download&id=1wjDLHL_6qyNg_PTVzgPDHX-oT7BhCyrj"], ["description", " University of New Orleans"], ["created_at", "2019-05-21 05:11:30.667085"], ["updated_at", "2019-05-21 05:11:30.667085"], ["user_id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+Started GET "/" for ::1 at 2019-05-21 00:11:34 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/sduwal/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UserControllerController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:7
+  Rendering user_controller/index.html.erb within layouts/application
+  [1m[36mAddress Load (1.6ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" INNER JOIN "addresses_users" ON "addresses"."id" = "addresses_users"."address_id" WHERE "addresses_users"."user_id" = $1 ORDER BY "addresses"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user_controller/index.html.erb:13
+  [1m[36mCACHE Address Load (0.0ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" INNER JOIN "addresses_users" ON "addresses"."id" = "addresses_users"."address_id" WHERE "addresses_users"."user_id" = $1 ORDER BY "addresses"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user_controller/index.html.erb:13
+  [1m[36mExperience Load (0.8ms)[0m  [1m[34mSELECT "experiences".* FROM "experiences" WHERE "experiences"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/user_controller/index.html.erb:28
+  [1m[36mAddress Load (1.2ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" INNER JOIN "addresses_experiences" ON "addresses"."id" = "addresses_experiences"."address_id" WHERE "addresses_experiences"."experience_id" = $1 ORDER BY "addresses"."id" ASC LIMIT $2[0m  [["experience_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user_controller/index.html.erb:35
+  [1m[36mCACHE Address Load (0.0ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" INNER JOIN "addresses_experiences" ON "addresses"."id" = "addresses_experiences"."address_id" WHERE "addresses_experiences"."experience_id" = $1 ORDER BY "addresses"."id" ASC LIMIT $2[0m  [["experience_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user_controller/index.html.erb:35
+  [1m[36mPersonalproject Load (0.7ms)[0m  [1m[34mSELECT "personalprojects".* FROM "personalprojects" WHERE "personalprojects"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/user_controller/index.html.erb:66
+  [1m[36mEducation Load (1.2ms)[0m  [1m[34mSELECT "educations".* FROM "educations" WHERE "educations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/user_controller/index.html.erb:86
+  [1m[36mPersonalaward Load (0.7ms)[0m  [1m[34mSELECT "personalawards".* FROM "personalawards" WHERE "personalawards"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/user_controller/index.html.erb:115
+  Rendered user_controller/index.html.erb within layouts/application (409.2ms)
+Completed 200 OK in 522ms (Views: 424.2ms | ActiveRecord: 29.3ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-21 00:11:37 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (1.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" ORDER BY "photos"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/photo/photo.html.erb:5
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "photos"[0m
+  ↳ app/views/photo/photo.html.erb:18
+  Rendered photo/photo.html.erb within layouts/application (62.1ms)
+Completed 200 OK in 100ms (Views: 70.7ms | ActiveRecord: 14.7ms)
+
+
+Started GET "/photos?page=2" for ::1 at 2019-05-21 00:11:44 -0500
+Processing by PhotoController#photo as HTML
+  Parameters: {"page"=>"2"}
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (1.1ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" ORDER BY "photos"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 15]]
+  ↳ app/views/photo/photo.html.erb:5
+  Rendered photo/photo.html.erb within layouts/application (40.6ms)
+Completed 200 OK in 72ms (Views: 67.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/photos?page=2" for ::1 at 2019-05-21 00:13:26 -0500
+Processing by PhotoController#photo as HTML
+  Parameters: {"page"=>"2"}
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" ORDER BY "photos"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 15]]
+  ↳ app/views/photo/photo.html.erb:5
+  Rendered photo/photo.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 38ms (Views: 34.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-21 00:13:29 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" ORDER BY "photos"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/photo/photo.html.erb:5
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "photos"[0m
+  ↳ app/views/photo/photo.html.erb:18
+  Rendered photo/photo.html.erb within layouts/application (43.1ms)
+Completed 200 OK in 70ms (Views: 65.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/photos?page=2" for ::1 at 2019-05-21 00:13:39 -0500
+Processing by PhotoController#photo as HTML
+  Parameters: {"page"=>"2"}
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" ORDER BY "photos"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 15]]
+  ↳ app/views/photo/photo.html.erb:5
+  Rendered photo/photo.html.erb within layouts/application (44.7ms)
+Completed 200 OK in 98ms (Views: 93.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/photos?page=2" for ::1 at 2019-05-21 00:14:14 -0500
+Processing by PhotoController#photo as HTML
+  Parameters: {"page"=>"2"}
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" ORDER BY "photos"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 15]]
+  ↳ app/views/photo/photo.html.erb:5
+  Rendered photo/photo.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 31ms (Views: 28.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-21 00:14:21 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (1.7ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" ORDER BY "photos"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/photo/photo.html.erb:5
+  [1m[35m (6.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "photos"[0m
+  ↳ app/views/photo/photo.html.erb:18
+  Rendered photo/photo.html.erb within layouts/application (54.0ms)
+Completed 200 OK in 108ms (Views: 96.1ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-21 00:15:22 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" ORDER BY "photos"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/photo/photo.html.erb:5
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "photos"[0m
+  ↳ app/views/photo/photo.html.erb:18
+  Rendered photo/photo.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 38ms (Views: 34.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-21 00:16:16 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" ORDER BY "photos"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/photo/photo.html.erb:5
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "photos"[0m
+  ↳ app/views/photo/photo.html.erb:18
+  Rendered photo/photo.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 35ms (Views: 32.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-21 00:17:19 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" ORDER BY "photos"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/photo/photo.html.erb:5
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "photos"[0m
+  ↳ app/views/photo/photo.html.erb:18
+  Rendered photo/photo.html.erb within layouts/application (35.0ms)
+Completed 200 OK in 64ms (Views: 57.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-21 00:17:32 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" ORDER BY "photos"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/photo/photo.html.erb:5
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "photos"[0m
+  ↳ app/views/photo/photo.html.erb:18
+  Rendered photo/photo.html.erb within layouts/application (51.3ms)
+Completed 200 OK in 104ms (Views: 98.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-21 00:18:11 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" ORDER BY "photos"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/photo/photo.html.erb:5
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "photos"[0m
+  ↳ app/views/photo/photo.html.erb:18
+  Rendered photo/photo.html.erb within layouts/application (57.5ms)
+Completed 200 OK in 110ms (Views: 101.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/photos?page=2" for ::1 at 2019-05-21 00:18:24 -0500
+Processing by PhotoController#photo as HTML
+  Parameters: {"page"=>"2"}
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (1.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" ORDER BY "photos"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 15]]
+  ↳ app/views/photo/photo.html.erb:5
+  Rendered photo/photo.html.erb within layouts/application (58.1ms)
+Completed 200 OK in 109ms (Views: 104.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/photos?page=2" for ::1 at 2019-05-21 00:19:35 -0500
+Processing by PhotoController#photo as HTML
+  Parameters: {"page"=>"2"}
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (1.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" ORDER BY "photos"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 15]]
+  ↳ app/views/photo/photo.html.erb:5
+  Rendered photo/photo.html.erb within layouts/application (58.6ms)
+Completed 200 OK in 106ms (Views: 94.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-21 00:19:49 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (1.1ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" ORDER BY "photos"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/photo/photo.html.erb:5
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "photos"[0m
+  ↳ app/views/photo/photo.html.erb:18
+  Rendered photo/photo.html.erb within layouts/application (55.7ms)
+Completed 200 OK in 98ms (Views: 90.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/photos" for ::1 at 2019-05-21 00:20:20 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (1.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" ORDER BY "photos"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/photo/photo.html.erb:5
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "photos"[0m
+  ↳ app/views/photo/photo.html.erb:18
+  Rendered photo/photo.html.erb within layouts/application (52.2ms)
+Completed 200 OK in 93ms (Views: 81.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/photos?page=2" for ::1 at 2019-05-21 00:20:28 -0500
+Processing by PhotoController#photo as HTML
+  Parameters: {"page"=>"2"}
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" ORDER BY "photos"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 15]]
+  ↳ app/views/photo/photo.html.erb:5
+  Rendered photo/photo.html.erb within layouts/application (54.8ms)
+Completed 200 OK in 105ms (Views: 99.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-05-21 00:21:00 -0500
+Processing by UserControllerController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_controller_controller.rb:7
+  Rendering user_controller/index.html.erb within layouts/application
+  [1m[36mAddress Load (0.4ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" INNER JOIN "addresses_users" ON "addresses"."id" = "addresses_users"."address_id" WHERE "addresses_users"."user_id" = $1 ORDER BY "addresses"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user_controller/index.html.erb:13
+  [1m[36mCACHE Address Load (0.1ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" INNER JOIN "addresses_users" ON "addresses"."id" = "addresses_users"."address_id" WHERE "addresses_users"."user_id" = $1 ORDER BY "addresses"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user_controller/index.html.erb:13
+  [1m[36mExperience Load (1.1ms)[0m  [1m[34mSELECT "experiences".* FROM "experiences" WHERE "experiences"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/user_controller/index.html.erb:28
+  [1m[36mAddress Load (0.4ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" INNER JOIN "addresses_experiences" ON "addresses"."id" = "addresses_experiences"."address_id" WHERE "addresses_experiences"."experience_id" = $1 ORDER BY "addresses"."id" ASC LIMIT $2[0m  [["experience_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user_controller/index.html.erb:35
+  [1m[36mCACHE Address Load (0.0ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" INNER JOIN "addresses_experiences" ON "addresses"."id" = "addresses_experiences"."address_id" WHERE "addresses_experiences"."experience_id" = $1 ORDER BY "addresses"."id" ASC LIMIT $2[0m  [["experience_id", 1], ["LIMIT", 1]]
+  ↳ app/views/user_controller/index.html.erb:35
+  [1m[36mPersonalproject Load (0.6ms)[0m  [1m[34mSELECT "personalprojects".* FROM "personalprojects" WHERE "personalprojects"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/user_controller/index.html.erb:66
+  [1m[36mEducation Load (0.4ms)[0m  [1m[34mSELECT "educations".* FROM "educations" WHERE "educations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/user_controller/index.html.erb:86
+  [1m[36mPersonalaward Load (0.6ms)[0m  [1m[34mSELECT "personalawards".* FROM "personalawards" WHERE "personalawards"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/user_controller/index.html.erb:115
+  Rendered user_controller/index.html.erb within layouts/application (36.0ms)
+Completed 200 OK in 84ms (Views: 73.4ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2019-05-21 00:21:02 -0500
+Processing by PhotoController#photo as HTML
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" ORDER BY "photos"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/photo/photo.html.erb:5
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "photos"[0m
+  ↳ app/views/photo/photo.html.erb:18
+  Rendered photo/photo.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/photos?page=2" for 127.0.0.1 at 2019-05-21 00:21:09 -0500
+Processing by PhotoController#photo as HTML
+  Parameters: {"page"=>"2"}
+  Rendering photo/photo.html.erb within layouts/application
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" ORDER BY "photos"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 15]]
+  ↳ app/views/photo/photo.html.erb:5
+  Rendered photo/photo.html.erb within layouts/application (38.4ms)
+Completed 200 OK in 77ms (Views: 73.3ms | ActiveRecord: 0.9ms)
+
+
